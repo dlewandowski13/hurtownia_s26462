@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="67"
-  DTS:VersionGUID="{88F532B0-142D-4274-B883-9E0A52D2F0E0}">
+  DTS:VersionBuild="76"
+  DTS:VersionGUID="{DBFB256C-A549-4EC9-A764-1B3F218252E8}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -293,6 +293,87 @@
               DTS:TextQualified="True"
               DTS:ObjectName="url"
               DTS:DTSID="{41C6C6C4-6F94-454D-BF35-A3DEF15E44BF}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[game_events_csv]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{88633DB6-8427-4DAE-8CB2-C46FC5E3E90D}"
+      DTS:ObjectName="game_events_csv">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1045"
+          DTS:HeaderRowDelimiter="_x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x0022_"
+          DTS:CodePage="65001"
+          DTS:ConnectionString="C:\Users\dawid\Documents\studia\IDH\baza_danych\game_events.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="game_id"
+              DTS:DTSID="{017B910F-D198-4943-A7C8-CE5BFE8775CD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="minute"
+              DTS:DTSID="{527FD095-D7C9-4B77-B576-3474B09AD1CB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="type"
+              DTS:DTSID="{020478C5-CBD6-42E9-99E6-C4DF81AEC9CC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="club_id"
+              DTS:DTSID="{D11DB88B-B2E5-4BCE-8FBC-BEB2F1AC3BA0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="player_id"
+              DTS:DTSID="{32E01943-A113-443E-9E41-E6F5913F581E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="description"
+              DTS:DTSID="{E58478C7-9358-48F5-B17F-F359F043F486}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="player_in_id"
+              DTS:DTSID="{BC92703C-1D80-463A-9132-676A43358AA5}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -778,12 +859,12 @@
           version="1">
           <components>
             <component
-              refId="Package\Upload clubs\Flat File Source"
+              refId="Package\Upload clubs\clubs_csv"
               componentClassID="Microsoft.FlatFileSource"
               contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
               description="Flat File Source"
               localeId="1045"
-              name="Flat File Source"
+              name="clubs_csv"
               usesDispositions="true"
               version="1">
               <properties>
@@ -798,24 +879,24 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Upload clubs\Flat File Source.Connections[FlatFileConnection]"
+                  refId="Package\Upload clubs\clubs_csv.Connections[FlatFileConnection]"
                   connectionManagerID="Package.ConnectionManagers[clubs_csv]"
                   connectionManagerRefId="Package.ConnectionManagers[clubs_csv]"
                   name="FlatFileConnection" />
               </connections>
               <outputs>
                 <output
-                  refId="Package\Upload clubs\Flat File Source.Outputs[Flat File Source Output]"
+                  refId="Package\Upload clubs\clubs_csv.Outputs[Flat File Source Output]"
                   name="Flat File Source Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Upload clubs\Flat File Source.Outputs[Flat File Source Output].Columns[name]"
+                      refId="Package\Upload clubs\clubs_csv.Outputs[Flat File Source Output].Columns[name]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Upload clubs\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[name]"
+                      externalMetadataColumnId="Package\Upload clubs\clubs_csv.Outputs[Flat File Source Output].ExternalColumns[name]"
                       length="50"
-                      lineageId="Package\Upload clubs\Flat File Source.Outputs[Flat File Source Output].Columns[name]"
+                      lineageId="Package\Upload clubs\clubs_csv.Outputs[Flat File Source Output].Columns[name]"
                       name="name"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -830,12 +911,12 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Upload clubs\Flat File Source.Outputs[Flat File Source Output].Columns[club_id]"
+                      refId="Package\Upload clubs\clubs_csv.Outputs[Flat File Source Output].Columns[club_id]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Upload clubs\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[club_id]"
-                      lineageId="Package\Upload clubs\Flat File Source.Outputs[Flat File Source Output].Columns[club_id]"
+                      externalMetadataColumnId="Package\Upload clubs\clubs_csv.Outputs[Flat File Source Output].ExternalColumns[club_id]"
+                      lineageId="Package\Upload clubs\clubs_csv.Outputs[Flat File Source Output].Columns[club_id]"
                       name="club_id"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -850,13 +931,13 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Upload clubs\Flat File Source.Outputs[Flat File Source Output].Columns[domestic_competition_id]"
+                      refId="Package\Upload clubs\clubs_csv.Outputs[Flat File Source Output].Columns[domestic_competition_id]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Upload clubs\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[domestic_competition_id]"
+                      externalMetadataColumnId="Package\Upload clubs\clubs_csv.Outputs[Flat File Source Output].ExternalColumns[domestic_competition_id]"
                       length="50"
-                      lineageId="Package\Upload clubs\Flat File Source.Outputs[Flat File Source Output].Columns[domestic_competition_id]"
+                      lineageId="Package\Upload clubs\clubs_csv.Outputs[Flat File Source Output].Columns[domestic_competition_id]"
                       name="domestic_competition_id"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -874,87 +955,87 @@
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Upload clubs\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[name]"
+                      refId="Package\Upload clubs\clubs_csv.Outputs[Flat File Source Output].ExternalColumns[name]"
                       dataType="wstr"
                       length="50"
                       name="name" />
                     <externalMetadataColumn
-                      refId="Package\Upload clubs\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[url]"
+                      refId="Package\Upload clubs\clubs_csv.Outputs[Flat File Source Output].ExternalColumns[url]"
                       codePage="65001"
                       dataType="str"
                       length="50"
                       name="url" />
                     <externalMetadataColumn
-                      refId="Package\Upload clubs\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[club_id]"
+                      refId="Package\Upload clubs\clubs_csv.Outputs[Flat File Source Output].ExternalColumns[club_id]"
                       dataType="i4"
                       name="club_id" />
                     <externalMetadataColumn
-                      refId="Package\Upload clubs\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[club_code]"
+                      refId="Package\Upload clubs\clubs_csv.Outputs[Flat File Source Output].ExternalColumns[club_code]"
                       codePage="65001"
                       dataType="str"
                       length="50"
                       name="club_code" />
                     <externalMetadataColumn
-                      refId="Package\Upload clubs\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[domestic_competition_id]"
+                      refId="Package\Upload clubs\clubs_csv.Outputs[Flat File Source Output].ExternalColumns[domestic_competition_id]"
                       dataType="wstr"
                       length="50"
                       name="domestic_competition_id" />
                     <externalMetadataColumn
-                      refId="Package\Upload clubs\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[total_market_value]"
+                      refId="Package\Upload clubs\clubs_csv.Outputs[Flat File Source Output].ExternalColumns[total_market_value]"
                       codePage="65001"
                       dataType="str"
                       length="50"
                       name="total_market_value" />
                     <externalMetadataColumn
-                      refId="Package\Upload clubs\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[squad_size]"
+                      refId="Package\Upload clubs\clubs_csv.Outputs[Flat File Source Output].ExternalColumns[squad_size]"
                       codePage="65001"
                       dataType="str"
                       length="50"
                       name="squad_size" />
                     <externalMetadataColumn
-                      refId="Package\Upload clubs\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[average_age]"
+                      refId="Package\Upload clubs\clubs_csv.Outputs[Flat File Source Output].ExternalColumns[average_age]"
                       codePage="65001"
                       dataType="str"
                       length="50"
                       name="average_age" />
                     <externalMetadataColumn
-                      refId="Package\Upload clubs\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[foreigners_number]"
+                      refId="Package\Upload clubs\clubs_csv.Outputs[Flat File Source Output].ExternalColumns[foreigners_number]"
                       codePage="65001"
                       dataType="str"
                       length="50"
                       name="foreigners_number" />
                     <externalMetadataColumn
-                      refId="Package\Upload clubs\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[foreigners_percentage]"
+                      refId="Package\Upload clubs\clubs_csv.Outputs[Flat File Source Output].ExternalColumns[foreigners_percentage]"
                       codePage="65001"
                       dataType="str"
                       length="50"
                       name="foreigners_percentage" />
                     <externalMetadataColumn
-                      refId="Package\Upload clubs\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[national_team_players]"
+                      refId="Package\Upload clubs\clubs_csv.Outputs[Flat File Source Output].ExternalColumns[national_team_players]"
                       codePage="65001"
                       dataType="str"
                       length="50"
                       name="national_team_players" />
                     <externalMetadataColumn
-                      refId="Package\Upload clubs\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[stadium_name]"
+                      refId="Package\Upload clubs\clubs_csv.Outputs[Flat File Source Output].ExternalColumns[stadium_name]"
                       codePage="65001"
                       dataType="str"
                       length="50"
                       name="stadium_name" />
                     <externalMetadataColumn
-                      refId="Package\Upload clubs\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[stadium_seats]"
+                      refId="Package\Upload clubs\clubs_csv.Outputs[Flat File Source Output].ExternalColumns[stadium_seats]"
                       codePage="65001"
                       dataType="str"
                       length="50"
                       name="stadium_seats" />
                     <externalMetadataColumn
-                      refId="Package\Upload clubs\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[net_transfer_record]"
+                      refId="Package\Upload clubs\clubs_csv.Outputs[Flat File Source Output].ExternalColumns[net_transfer_record]"
                       codePage="65001"
                       dataType="str"
                       length="50"
                       name="net_transfer_record" />
                     <externalMetadataColumn
-                      refId="Package\Upload clubs\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[coach_name]"
+                      refId="Package\Upload clubs\clubs_csv.Outputs[Flat File Source Output].ExternalColumns[coach_name]"
                       codePage="65001"
                       dataType="str"
                       length="50"
@@ -962,27 +1043,27 @@
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\Upload clubs\Flat File Source.Outputs[Flat File Source Error Output]"
+                  refId="Package\Upload clubs\clubs_csv.Outputs[Flat File Source Error Output]"
                   isErrorOut="true"
                   name="Flat File Source Error Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Upload clubs\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      refId="Package\Upload clubs\clubs_csv.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
                       codePage="1250"
                       dataType="text"
                       description="Flat File Source Error Output Column"
-                      lineageId="Package\Upload clubs\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      lineageId="Package\Upload clubs\clubs_csv.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
                       name="Flat File Source Error Output Column" />
                     <outputColumn
-                      refId="Package\Upload clubs\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      refId="Package\Upload clubs\clubs_csv.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Upload clubs\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Upload clubs\clubs_csv.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Upload clubs\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      refId="Package\Upload clubs\clubs_csv.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Upload clubs\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Upload clubs\clubs_csv.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -991,11 +1072,11 @@
               </outputs>
             </component>
             <component
-              refId="Package\Upload clubs\OLE DB Destination 1"
+              refId="Package\Upload clubs\d_clubs"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
               description="OLE DB Destination"
-              name="OLE DB Destination 1"
+              name="d_clubs"
               usesDispositions="true"
               version="4">
               <properties>
@@ -1048,7 +1129,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Upload clubs\OLE DB Destination 1.Connections[OleDbConnection]"
+                  refId="Package\Upload clubs\d_clubs.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[hurtownia_s26462]"
                   connectionManagerRefId="Package.ConnectionManagers[hurtownia_s26462]"
                   description="The OLE DB runtime connection used to access the database."
@@ -1056,70 +1137,70 @@
               </connections>
               <inputs>
                 <input
-                  refId="Package\Upload clubs\OLE DB Destination 1.Inputs[OLE DB Destination Input]"
+                  refId="Package\Upload clubs\d_clubs.Inputs[OLE DB Destination Input]"
                   errorOrTruncationOperation="Insert"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Upload clubs\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[name]"
+                      refId="Package\Upload clubs\d_clubs.Inputs[OLE DB Destination Input].Columns[name]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="name"
-                      externalMetadataColumnId="Package\Upload clubs\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[name]"
-                      lineageId="Package\Upload clubs\Flat File Source.Outputs[Flat File Source Output].Columns[name]" />
+                      externalMetadataColumnId="Package\Upload clubs\d_clubs.Inputs[OLE DB Destination Input].ExternalColumns[name]"
+                      lineageId="Package\Upload clubs\clubs_csv.Outputs[Flat File Source Output].Columns[name]" />
                     <inputColumn
-                      refId="Package\Upload clubs\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[club_id]"
+                      refId="Package\Upload clubs\d_clubs.Inputs[OLE DB Destination Input].Columns[club_id]"
                       cachedDataType="i4"
                       cachedName="club_id"
-                      externalMetadataColumnId="Package\Upload clubs\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[id]"
-                      lineageId="Package\Upload clubs\Flat File Source.Outputs[Flat File Source Output].Columns[club_id]" />
+                      externalMetadataColumnId="Package\Upload clubs\d_clubs.Inputs[OLE DB Destination Input].ExternalColumns[id]"
+                      lineageId="Package\Upload clubs\clubs_csv.Outputs[Flat File Source Output].Columns[club_id]" />
                     <inputColumn
-                      refId="Package\Upload clubs\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[domestic_competition_id]"
+                      refId="Package\Upload clubs\d_clubs.Inputs[OLE DB Destination Input].Columns[domestic_competition_id]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="domestic_competition_id"
-                      externalMetadataColumnId="Package\Upload clubs\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[league]"
-                      lineageId="Package\Upload clubs\Flat File Source.Outputs[Flat File Source Output].Columns[domestic_competition_id]" />
+                      externalMetadataColumnId="Package\Upload clubs\d_clubs.Inputs[OLE DB Destination Input].ExternalColumns[league]"
+                      lineageId="Package\Upload clubs\clubs_csv.Outputs[Flat File Source Output].Columns[domestic_competition_id]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Upload clubs\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[id]"
+                      refId="Package\Upload clubs\d_clubs.Inputs[OLE DB Destination Input].ExternalColumns[id]"
                       dataType="i4"
                       name="id" />
                     <externalMetadataColumn
-                      refId="Package\Upload clubs\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[name]"
+                      refId="Package\Upload clubs\d_clubs.Inputs[OLE DB Destination Input].ExternalColumns[name]"
                       dataType="wstr"
                       length="50"
                       name="name" />
                     <externalMetadataColumn
-                      refId="Package\Upload clubs\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[league]"
+                      refId="Package\Upload clubs\d_clubs.Inputs[OLE DB Destination Input].ExternalColumns[league]"
                       dataType="wstr"
-                      length="50"
+                      length="10"
                       name="league" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Upload clubs\OLE DB Destination 1.Outputs[OLE DB Destination Error Output]"
+                  refId="Package\Upload clubs\d_clubs.Outputs[OLE DB Destination Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\Upload clubs\OLE DB Destination 1.Inputs[OLE DB Destination Input]">
+                  synchronousInputId="Package\Upload clubs\d_clubs.Inputs[OLE DB Destination Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Upload clubs\OLE DB Destination 1.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      refId="Package\Upload clubs\d_clubs.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Upload clubs\OLE DB Destination 1.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Upload clubs\d_clubs.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Upload clubs\OLE DB Destination 1.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      refId="Package\Upload clubs\d_clubs.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Upload clubs\OLE DB Destination 1.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Upload clubs\d_clubs.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -1131,9 +1212,9 @@
           <paths>
             <path
               refId="Package\Upload clubs.Paths[Flat File Source Output]"
-              endId="Package\Upload clubs\OLE DB Destination 1.Inputs[OLE DB Destination Input]"
+              endId="Package\Upload clubs\d_clubs.Inputs[OLE DB Destination Input]"
               name="Flat File Source Output"
-              startId="Package\Upload clubs\Flat File Source.Outputs[Flat File Source Output]" />
+              startId="Package\Upload clubs\clubs_csv.Outputs[Flat File Source Output]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -2444,6 +2525,333 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
         </pipeline>
       </DTS:ObjectData>
     </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Upload game events"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{AAA70FED-9DA5-4F79-9666-E7FD510A584C}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Upload game events"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Upload game events\d_k_game_events"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="d_k_game_events"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[d_k_game_events]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1250</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">true</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Upload game events\d_k_game_events.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[hurtownia_s26462]"
+                  connectionManagerRefId="Package.ConnectionManagers[hurtownia_s26462]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Upload game events\d_k_game_events.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Upload game events\d_k_game_events.Inputs[OLE DB Destination Input].Columns[type]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="type"
+                      externalMetadataColumnId="Package\Upload game events\d_k_game_events.Inputs[OLE DB Destination Input].ExternalColumns[event_type]"
+                      lineageId="Package\Upload game events\Flat File Source.Outputs[Flat File Source Output].Columns[type]" />
+                    <inputColumn
+                      refId="Package\Upload game events\d_k_game_events.Inputs[OLE DB Destination Input].Columns[minute]"
+                      cachedDataType="i4"
+                      cachedName="minute"
+                      externalMetadataColumnId="Package\Upload game events\d_k_game_events.Inputs[OLE DB Destination Input].ExternalColumns[minute]"
+                      lineageId="Package\Upload game events\Flat File Source.Outputs[Flat File Source Output].Columns[minute]" />
+                    <inputColumn
+                      refId="Package\Upload game events\d_k_game_events.Inputs[OLE DB Destination Input].Columns[game_id]"
+                      cachedDataType="i4"
+                      cachedName="game_id"
+                      externalMetadataColumnId="Package\Upload game events\d_k_game_events.Inputs[OLE DB Destination Input].ExternalColumns[id_game]"
+                      lineageId="Package\Upload game events\Flat File Source.Outputs[Flat File Source Output].Columns[game_id]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Upload game events\d_k_game_events.Inputs[OLE DB Destination Input].ExternalColumns[Id]"
+                      dataType="i4"
+                      name="Id" />
+                    <externalMetadataColumn
+                      refId="Package\Upload game events\d_k_game_events.Inputs[OLE DB Destination Input].ExternalColumns[event_type]"
+                      dataType="wstr"
+                      length="255"
+                      name="event_type" />
+                    <externalMetadataColumn
+                      refId="Package\Upload game events\d_k_game_events.Inputs[OLE DB Destination Input].ExternalColumns[minute]"
+                      dataType="i4"
+                      name="minute" />
+                    <externalMetadataColumn
+                      refId="Package\Upload game events\d_k_game_events.Inputs[OLE DB Destination Input].ExternalColumns[id_game]"
+                      dataType="i4"
+                      name="id_game" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Upload game events\d_k_game_events.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Upload game events\d_k_game_events.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Upload game events\d_k_game_events.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Upload game events\d_k_game_events.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Upload game events\d_k_game_events.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Upload game events\d_k_game_events.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Upload game events\Flat File Source"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1045"
+              name="Flat File Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">true</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Upload game events\Flat File Source.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[game_events_csv]"
+                  connectionManagerRefId="Package.ConnectionManagers[game_events_csv]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Upload game events\Flat File Source.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Upload game events\Flat File Source.Outputs[Flat File Source Output].Columns[game_id]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Upload game events\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[game_id]"
+                      lineageId="Package\Upload game events\Flat File Source.Outputs[Flat File Source Output].Columns[game_id]"
+                      name="game_id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Upload game events\Flat File Source.Outputs[Flat File Source Output].Columns[minute]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Upload game events\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[minute]"
+                      lineageId="Package\Upload game events\Flat File Source.Outputs[Flat File Source Output].Columns[minute]"
+                      name="minute"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Upload game events\Flat File Source.Outputs[Flat File Source Output].Columns[type]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Upload game events\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[type]"
+                      length="255"
+                      lineageId="Package\Upload game events\Flat File Source.Outputs[Flat File Source Output].Columns[type]"
+                      name="type"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Upload game events\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[game_id]"
+                      dataType="i4"
+                      name="game_id" />
+                    <externalMetadataColumn
+                      refId="Package\Upload game events\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[minute]"
+                      dataType="i4"
+                      name="minute" />
+                    <externalMetadataColumn
+                      refId="Package\Upload game events\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[type]"
+                      dataType="wstr"
+                      length="255"
+                      name="type" />
+                    <externalMetadataColumn
+                      refId="Package\Upload game events\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[club_id]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="club_id" />
+                    <externalMetadataColumn
+                      refId="Package\Upload game events\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[player_id]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="player_id" />
+                    <externalMetadataColumn
+                      refId="Package\Upload game events\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[description]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="description" />
+                    <externalMetadataColumn
+                      refId="Package\Upload game events\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[player_in_id]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="player_in_id" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Upload game events\Flat File Source.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Upload game events\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="65001"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Upload game events\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Upload game events\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Upload game events\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Upload game events\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Upload game events\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Upload game events.Paths[Flat File Source Output]"
+              endId="Package\Upload game events\d_k_game_events.Inputs[OLE DB Destination Input]"
+              name="Flat File Source Output"
+              startId="Package\Upload game events\Flat File Source.Outputs[Flat File Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
   </DTS:Executables>
   <DTS:PrecedenceConstraints>
     <DTS:PrecedenceConstraint
@@ -2454,6 +2862,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
       DTS:To="Package\Upload clubs" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{8CA9A3CC-64D2-4AF8-A936-3C6D1378BF88}"
+      DTS:From="Package\Upload clubs"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\Upload game events" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
@@ -2466,7 +2882,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="143,42"
           Id="Package\Upload clubs"
@@ -2497,6 +2913,32 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="180,42"
+          Id="Package\Upload game events"
+          TopLeft="55,259" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="147,202.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,56.5"
+              Start="0,0"
+              End="0,49">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,49" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -2506,27 +2948,27 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="156,42"
-          Id="Package\Upload clubs\Flat File Source"
+          Size="127,42"
+          Id="Package\Upload clubs\clubs_csv"
           TopLeft="286,57" />
         <NodeLayout
-          Size="186,42"
-          Id="Package\Upload clubs\OLE DB Destination 1"
-          TopLeft="274,206" />
+          Size="117,42"
+          Id="Package\Upload clubs\d_clubs"
+          TopLeft="287,190" />
         <EdgeLayout
           Id="Package\Upload clubs.Paths[Flat File Source Output]"
-          TopLeft="365.5,99">
+          TopLeft="347.5,99">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,107"
+              EndConnector="0,91"
               Start="0,0"
-              End="0,99.5">
+              End="0,83.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,99.5" />
+                    End="0,83.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2539,7 +2981,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Upload clubs\OLE DB Destination 1">
+    design-time-name="Package\Upload clubs\d_clubs">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -2617,6 +3059,59 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
   </TaskHost>
   <PipelineComponentMetadata
     design-time-name="Package\Upload competitions\d_competitions">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Upload game events">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="156,42"
+          Id="Package\Upload game events\Flat File Source"
+          TopLeft="168,56" />
+        <NodeLayout
+          Size="169,42"
+          Id="Package\Upload game events\d_k_game_events"
+          TopLeft="161,191" />
+        <EdgeLayout
+          Id="Package\Upload game events.Paths[Flat File Source Output]"
+          TopLeft="245.75,98">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,93"
+              Start="0,0"
+              End="0,85.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,85.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-8,34.75,16,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Upload game events\d_k_game_events">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="create_database"
   DTS:PackageType="5"
-  DTS:VersionBuild="37"
-  DTS:VersionGUID="{B734F1AD-A63D-4E93-8882-C4DBDFD7ECBC}">
+  DTS:VersionBuild="40"
+  DTS:VersionGUID="{54761AE4-D34C-40C0-8932-1957968B786A}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -389,7 +389,7 @@
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{A03DBFE5-ACCC-4917-B36B-192FBE8DF1E7}"
-          SQLTask:SqlStatementSource="USE hurtownia_s26462;&#xA;&#xA;IF NOT EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'd_k_game_events' AND TABLE_SCHEMA = 'dbo')&#xA;BEGIN&#xA;    CREATE TABLE dbo.d_k_game_events (&#xA;        Id INT PRIMARY KEY IDENTITY(1,1),&#xA;        event_type NVARCHAR(255)&#xA;    );&#xA;END&#xA;"
+          SQLTask:SqlStatementSource="USE hurtownia_s26462;&#xA;&#xA;IF NOT EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'd_k_game_events' AND TABLE_SCHEMA = 'dbo')&#xA;BEGIN&#xA;    CREATE TABLE dbo.d_k_game_events (&#xA;        Id INT PRIMARY KEY IDENTITY(1,1),&#xA;        id_game INT,&#xA;        minute INT,&#xA;        event_type NVARCHAR(255),&#xA;        FOREIGN KEY (id_game) REFERENCES dbo.d_games(id)&#xA;    );&#xA;END&#xA;"
           SQLTask:ServerVersion="9"
           SQLTask:ExtendedLogging="True"
           SQLTask:LocalConnectionForLogging=""
@@ -476,11 +476,11 @@
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
       DTS:CreationName=""
-      DTS:DTSID="{B94EED76-1FA0-446D-A882-F647A6CB546C}"
-      DTS:From="Package\Create Table d_clubs"
+      DTS:DTSID="{2D31F38A-6873-44DE-9570-2CFBD6DCF0F7}"
+      DTS:From="Package\Create Table d_players"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 1"
-      DTS:To="Package\Create Table d_k_game_events" />
+      DTS:To="Package\Create Table d_k_player_valuations" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
       DTS:CreationName=""
@@ -492,27 +492,27 @@
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 3]"
       DTS:CreationName=""
-      DTS:DTSID="{C79F55E8-D06D-4C1F-874B-005CA97DD554}"
-      DTS:From="Package\Create Table d_k_game_events"
+      DTS:DTSID="{3C27DE2A-E392-4073-B911-E2C29B7D6784}"
+      DTS:From="Package\Create Table d_clubs"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 3"
-      DTS:To="Package\Create Table d_players" />
+      DTS:To="Package\Create Table d_games" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 4]"
       DTS:CreationName=""
-      DTS:DTSID="{FBDF1E85-E5F3-4F95-850D-2779A52D35B4}"
-      DTS:From="Package\Create Table d_players"
+      DTS:DTSID="{5A6ADE57-E8E0-49F4-8B8D-4F820B5AB0CE}"
+      DTS:From="Package\Create Table d_games"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 4"
-      DTS:To="Package\Create Table d_games" />
+      DTS:To="Package\Create Table d_k_game_events" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 5]"
       DTS:CreationName=""
-      DTS:DTSID="{5872594A-A170-4548-8C7C-F60317DF3E60}"
-      DTS:From="Package\Create Table d_games"
+      DTS:DTSID="{65F5FB37-22CF-480D-A2E7-AD0BD485A929}"
+      DTS:From="Package\Create Table d_k_game_events"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 5"
-      DTS:To="Package\Create Table d_k_player_valuations" />
+      DTS:To="Package\Create Table d_players" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 6]"
       DTS:CreationName=""
@@ -553,7 +553,7 @@
         <NodeLayout
           Size="183,42"
           Id="Package\Create Table d_clubs"
-          TopLeft="368,299" />
+          TopLeft="370,299" />
         <NodeLayout
           Size="219,42"
           Id="Package\Create Table d_competitions"
@@ -561,11 +561,11 @@
         <NodeLayout
           Size="191,42"
           Id="Package\Create Table d_games"
-          TopLeft="87,392" />
+          TopLeft="629,301" />
         <NodeLayout
           Size="235,42"
           Id="Package\Create Table d_k_game_events"
-          TopLeft="618.5,299" />
+          TopLeft="891.5,300" />
         <NodeLayout
           Size="255,42"
           Id="Package\Create Table d_k_player_valuations"
@@ -573,7 +573,7 @@
         <NodeLayout
           Size="193,42"
           Id="Package\Create Table d_players"
-          TopLeft="925.984848484848,299.787878787879" />
+          TopLeft="94.9848484848485,391.787878787879" />
         <NodeLayout
           Size="227,42"
           Id="Package\Create Table f_player_statistic"
@@ -650,14 +650,14 @@
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="74.5,0"
+              EndConnector="76.5,0"
               Start="0,0"
-              End="67,0">
+              End="69,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="67,0" />
+                    End="69,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -668,18 +668,18 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="551,320">
+          TopLeft="287.984848484848,413.893939393939">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="67.5,0"
+              EndConnector="196.515151515152,0"
               Start="0,0"
-              End="60,0">
+              End="189.015151515152,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="60,0" />
+                    End="189.015151515152,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -690,18 +690,18 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 3]"
-          TopLeft="853.5,320.393939393939">
+          TopLeft="553,321">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="72.4848484848485,0"
+              EndConnector="76,0"
               Start="0,0"
-              End="64.9848484848485,0">
+              End="68.5,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="64.9848484848485,0" />
+                    End="68.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -712,30 +712,18 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 4]"
-          TopLeft="1022.48484848485,341.787878787879">
+          TopLeft="820,321.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-839.984848484848,50.212121212121"
+              EndConnector="71.5,0"
               Start="0,0"
-              End="-839.984848484848,42.712121212121">
+              End="64,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,21.1060606060605" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,21.1060606060605"
-                    Point2="0,25.1060606060605"
-                    Point3="-4,25.1060606060605" />
-                  <mssgle:LineSegment
-                    End="-835.984848484848,25.1060606060605" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-835.984848484848,25.1060606060605"
-                    Point2="-839.984848484848,25.1060606060605"
-                    Point3="-839.984848484848,29.1060606060605" />
-                  <mssgle:LineSegment
-                    End="-839.984848484848,42.712121212121" />
+                    End="64,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -746,18 +734,30 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 5]"
-          TopLeft="278,414">
+          TopLeft="1009,342">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="206.5,0"
+              EndConnector="-817.515151515152,49.787878787879"
               Start="0,0"
-              End="199,0">
+              End="-817.515151515152,42.287878787879">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="199,0" />
+                    End="0,20.8939393939395" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,20.8939393939395"
+                    Point2="0,24.8939393939395"
+                    Point3="-4,24.8939393939395" />
+                  <mssgle:LineSegment
+                    End="-813.515151515152,24.8939393939395" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-813.515151515152,24.8939393939395"
+                    Point2="-817.515151515152,24.8939393939395"
+                    Point3="-817.515151515152,28.8939393939395" />
+                  <mssgle:LineSegment
+                    End="-817.515151515152,42.287878787879" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
