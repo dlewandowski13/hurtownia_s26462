@@ -11,11 +11,165 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="23"
-  DTS:VersionGUID="{6FC3ED2F-51A0-40BE-B70D-49EC5DA1D83D}">
+  DTS:VersionBuild="60"
+  DTS:VersionGUID="{23FB149C-D159-48EB-925C-00801707A471}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[clubs_csv]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{2F9D424C-4925-4A90-A11F-D18DCB80AE96}"
+      DTS:ObjectName="clubs_csv">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1045"
+          DTS:HeaderRowDelimiter="_x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x0022_"
+          DTS:CodePage="65001"
+          DTS:ConnectionString="C:\Users\dawid\Documents\studia\IDH\baza_danych\clubs.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="club_id"
+              DTS:DTSID="{83535915-121F-435F-B3F2-4C9A565035C0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="club_code"
+              DTS:DTSID="{271633C9-7EAD-466C-B987-34A64A63E81E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="name"
+              DTS:DTSID="{AB150FFD-84FB-4ED9-B2B5-A7885503B586}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="domestic_competition_id"
+              DTS:DTSID="{9312FB8D-0F7A-4016-8612-B09730A58B39}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="total_market_value"
+              DTS:DTSID="{E148F67B-4318-46E9-87C0-9521C2FBC719}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="squad_size"
+              DTS:DTSID="{5E876388-1C55-4937-AB22-E44C6291C132}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="average_age"
+              DTS:DTSID="{7FE539EE-F298-424F-8C14-0B9C15E03AC6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="foreigners_number"
+              DTS:DTSID="{5ECCFF8E-4D43-4BF0-8F01-19714A30C04A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="foreigners_percentage"
+              DTS:DTSID="{2AD8863C-469A-4A80-A544-D620835C816D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="national_team_players"
+              DTS:DTSID="{977D924D-E954-4679-A542-27AE6DA52DAA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="stadium_name"
+              DTS:DTSID="{CDCF8E6C-0E98-4C3A-BBAE-B6B568F36C3B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="stadium_seats"
+              DTS:DTSID="{F660F990-1827-46C7-BEF9-7BCD51A69521}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="net_transfer_record"
+              DTS:DTSID="{CB622AAE-8A8E-4724-AE68-366430B623C6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="coach_name"
+              DTS:DTSID="{4BF60280-7CCA-46AE-A0FD-8591F0AAA9D3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="url"
+              DTS:DTSID="{D12498D8-5AE8-4763-A264-630DDDC5E650}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[hurtownia_s26462]"
       DTS:CreationName="OLEDB"
@@ -25,13 +179,13 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=DESKTOP-A7LBTN7\MSSQLSERVER01;Initial Catalog=hurtownia_s26462;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package1-{58D80DC5-6397-41F8-A2BC-CF0A25F53148}DESKTOP-A7LBTN7\MSSQLSERVER01.hurtownia_s26462;Auto Translate=False;" />
+          DTS:ConnectionString="Data Source=DESKTOP-A7LBTN7\MSSQLSERVER01;Initial Catalog=hurtownia_s26462;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-Package1-{58D80DC5-6397-41F8-A2BC-CF0A25F53148}DESKTOP-A7LBTN7\MSSQLSERVER01.hurtownia_s26462;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[players_csv]"
       DTS:CreationName="FLATFILE"
-      DTS:DTSID="{9EF1D60C-915E-4201-9298-DA08C383B24E}"
+      DTS:DTSID="{FD80FFF1-CB68-4F26-AB93-64A22E5F86DB}"
       DTS:ObjectName="players_csv">
       <DTS:ObjectData>
         <DTS:ConnectionManager
@@ -40,36 +194,34 @@
           DTS:HeaderRowDelimiter="_x000A_"
           DTS:ColumnNamesInFirstDataRow="True"
           DTS:RowDelimiter=""
-          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:TextQualifier="_x0022_"
           DTS:CodePage="65001"
           DTS:ConnectionString="C:\Users\dawid\Documents\studia\IDH\baza_danych\players.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
+              DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="player_id"
-              DTS:DTSID="{E61385B7-8A00-4863-9C8F-C9539931B496}"
+              DTS:DTSID="{7C52905A-0577-4EB9-86CE-1ED94C4B04A1}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
               DTS:MaximumWidth="50"
-              DTS:DataType="129"
+              DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="name"
-              DTS:DTSID="{00089586-D34C-4DA1-AC24-5DAF97FCC079}"
+              DTS:DTSID="{3D387F55-5B62-452C-B186-C93019D66A25}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
+              DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="current_club_id"
-              DTS:DTSID="{99C45BA6-8592-4114-9A61-8E881008E3D9}"
+              DTS:DTSID="{210B083B-6A04-4533-BCFE-14E5BC5DE331}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -78,15 +230,16 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="current_club_name"
-              DTS:DTSID="{D531D11F-AC77-4B75-B190-2328A7F6A315}"
+              DTS:DTSID="{FFEBCE17-8D75-4AB8-9D9C-4CD01E3D98C7}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:DataType="19"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="country_of_citizenship"
-              DTS:DTSID="{326F6D8C-944E-4F6C-A094-E02C30C8B350}"
+              DTS:DTSID="{FC94A4C5-A96F-44DA-A392-29CC6DFAEB41}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -95,7 +248,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="country_of_birth"
-              DTS:DTSID="{0A86B74E-BAC6-4626-BC95-BD33D5B10A79}"
+              DTS:DTSID="{CDF16035-FACE-4194-B066-44CCDE442181}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -104,25 +257,24 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="city_of_birth"
-              DTS:DTSID="{C17EFCBD-8309-4AFD-B2AE-0E97E7839854}"
+              DTS:DTSID="{168D177B-7DAF-4754-A86E-5465791F7F2F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
+              DTS:DataType="133"
               DTS:TextQualified="True"
               DTS:ObjectName="date_of_birth"
-              DTS:DTSID="{B5B4CABA-98FD-4C9C-A188-B2372589A9CB}"
+              DTS:DTSID="{734244B3-5FE0-40EA-BBDC-2F7DAFEF4828}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
               DTS:MaximumWidth="50"
-              DTS:DataType="129"
+              DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="position"
-              DTS:DTSID="{C9146D9B-652B-46F3-81D4-70F2E997979F}"
+              DTS:DTSID="{D3923307-34B1-4735-871D-801D761CC443}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -131,16 +283,16 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="sub_position"
-              DTS:DTSID="{84D14F1F-10EB-4025-B316-7FC927D9BD06}"
+              DTS:DTSID="{0CA963B3-C3D8-4515-A6D6-2B2C559BCFC6}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
               DTS:MaximumWidth="50"
-              DTS:DataType="129"
+              DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="foot"
-              DTS:DTSID="{20AF37F7-D376-4103-A5BB-A5087462CB49}"
+              DTS:DTSID="{4390BE27-9D05-42A5-BC5C-8571D5AF732B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -149,7 +301,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="height_in_cm"
-              DTS:DTSID="{F7B889EA-32CD-4048-B80D-033A8CE55F97}"
+              DTS:DTSID="{13299F56-E7EE-4437-A500-CEE9E88C138A}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -158,7 +310,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="market_value_in_eur"
-              DTS:DTSID="{10D937F8-C28C-4E0E-A1A4-62528C2276EB}"
+              DTS:DTSID="{1677480F-AF4F-4252-825C-488E0EB9A787}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -167,7 +319,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="highest_market_value_in_eur"
-              DTS:DTSID="{0307E346-D468-461A-B259-3B238D961A44}"
+              DTS:DTSID="{BFA82C85-AC73-445E-B6B4-535D155C0C1E}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -176,7 +328,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="agent_name"
-              DTS:DTSID="{D6289A90-6EEC-4B18-9EC9-87D390E18E65}"
+              DTS:DTSID="{29A2E6A7-F65D-483F-9A6B-30C9B7B4C786}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -185,7 +337,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="contract_expiration_date"
-              DTS:DTSID="{40194867-D272-40EE-B31C-8DF3EB754877}"
+              DTS:DTSID="{3FA3F39D-E3A4-48DF-821A-7738BFD817A9}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -194,7 +346,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="current_club_domestic_competition_id"
-              DTS:DTSID="{068B787A-0E56-40B2-8BAC-04FBAF92A91B}"
+              DTS:DTSID="{B20D60F4-CC87-4B0E-B381-F6F082227EF3}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -203,7 +355,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="first_name"
-              DTS:DTSID="{C8B38E02-799E-48DE-B77B-0055E496B0F8}"
+              DTS:DTSID="{AAC191AD-7F79-460F-A7A3-C986B516C4F5}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -212,7 +364,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="last_name"
-              DTS:DTSID="{18D8FCBE-0A82-43C5-AB4A-1D37D4AC8E7D}"
+              DTS:DTSID="{C797E8AB-CF3A-423F-BF6E-E644C293488E}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -221,7 +373,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="player_code"
-              DTS:DTSID="{7D317FF2-C29B-4D86-98DF-C3B02EAF3134}"
+              DTS:DTSID="{BEAA065F-C35C-4415-9A2F-9F2010C1B7EA}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -230,7 +382,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="image_url"
-              DTS:DTSID="{6B626571-6E7D-4B30-AE2E-68B73D8D5F79}"
+              DTS:DTSID="{24ADD8DA-7A5A-493B-B6F2-67C810175E80}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -239,7 +391,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="last_season"
-              DTS:DTSID="{9A22A3E2-C5DC-41EB-934F-3581E8C2B875}"
+              DTS:DTSID="{D72C5835-7350-4811-A46F-6D4060164E3D}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -248,7 +400,234 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="url"
-              DTS:DTSID="{F9A4559E-535C-4119-86DC-C84859D1E9C7}"
+              DTS:DTSID="{27182159-3DA3-4F63-BA6F-DE7084CFC9C9}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[player_converted.csv]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{3AD94904-C8DB-40FA-94DB-534FE75F17B8}"
+      DTS:ObjectName="player_converted.csv">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1045"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1250"
+          DTS:ConnectionString="C:\Users\dawid\Documents\studia\IDH\baza_danych\converted\players_converted.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="player_id"
+              DTS:DTSID="{B19274AC-8BB9-4C97-B8B0-B04444C53A8E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="name"
+              DTS:DTSID="{976FD8B2-822F-4215-AF6D-9A346220F089}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="current_club_id"
+              DTS:DTSID="{F13B4BD9-C1AC-414E-9344-46EEE25377D9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="current_club_name"
+              DTS:DTSID="{DF8A829E-536C-41C4-99F3-E0CB304E9972}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="country_of_citizenship"
+              DTS:DTSID="{1CB8CACF-019C-4079-8148-46D278D8F370}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="country_of_birth"
+              DTS:DTSID="{E2062220-A8C0-4926-9162-4500E6F60DD9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="city_of_birth"
+              DTS:DTSID="{849F87AF-6A65-461E-8419-01EE3629D8ED}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="date_of_birth"
+              DTS:DTSID="{B4879D20-D16E-413A-AB8A-E3E26403C807}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="position"
+              DTS:DTSID="{CFB1C103-807D-43A2-A4CF-30B162843C8D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="sub_position"
+              DTS:DTSID="{94D66CEE-2BFD-4E88-BB0C-6F441592CBD7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="foot"
+              DTS:DTSID="{F0CC957A-C2B4-4291-B018-FC6F371701E5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="height_in_cm"
+              DTS:DTSID="{091FCF27-45B4-403C-A3E5-AD1183964E60}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="market_value_in_eur"
+              DTS:DTSID="{F9159A8D-ED7A-453B-BA27-82CFD0F7302E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="highest_market_value_in_eur"
+              DTS:DTSID="{6969AC40-CC43-4627-A5BF-E95D2AE85A29}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="agent_name"
+              DTS:DTSID="{48F51323-0446-4A59-A181-A728B8EEE102}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="contract_expiration_date"
+              DTS:DTSID="{D2F5DACA-7827-4B7F-9EBC-D1C944EA3C9A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="current_club_domestic_competition_id"
+              DTS:DTSID="{039E07E6-220B-4498-A436-F52ECA328433}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="first_name"
+              DTS:DTSID="{A1FE2FD0-61D3-4C9C-8CAA-CC9E01CBFA66}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="last_name"
+              DTS:DTSID="{64979A2F-2591-439D-BC5E-43CB9C28E7A8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="player_code"
+              DTS:DTSID="{0E65D4E0-21FE-4B6F-AAC6-AC52A99F4CB1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="image_url"
+              DTS:DTSID="{33C2A4E2-7CDC-4886-A524-E00B3EBD1524}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="last_season"
+              DTS:DTSID="{047FF61C-222F-475A-9108-1A206F65F804}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="url"
+              DTS:DTSID="{D94A7F96-4130-43AC-83BD-D960F30DEA97}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -258,20 +637,20 @@
   <DTS:Variables />
   <DTS:Executables>
     <DTS:Executable
-      DTS:refId="Package\Upload players"
+      DTS:refId="Package\Upload clubs"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
       DTS:DTSID="{D818AC82-368E-4AE0-8FFD-FC40AC0C72B2}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Upload players">
+      DTS:ObjectName="Upload clubs">
       <DTS:Variables />
       <DTS:ObjectData>
         <pipeline
           version="1">
           <components>
             <component
-              refId="Package\Upload players\Flat File Source"
+              refId="Package\Upload clubs\Flat File Source"
               componentClassID="Microsoft.FlatFileSource"
               contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
               description="Flat File Source"
@@ -283,7 +662,7 @@
                 <property
                   dataType="System.Boolean"
                   description="Specifies whether zero-length columns are treated as null."
-                  name="RetainNulls">false</property>
+                  name="RetainNulls">true</property>
                 <property
                   dataType="System.String"
                   description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
@@ -291,47 +670,24 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Upload players\Flat File Source.Connections[FlatFileConnection]"
-                  connectionManagerID="Package.ConnectionManagers[players_csv]"
-                  connectionManagerRefId="Package.ConnectionManagers[players_csv]"
+                  refId="Package\Upload clubs\Flat File Source.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[clubs_csv]"
+                  connectionManagerRefId="Package.ConnectionManagers[clubs_csv]"
                   name="FlatFileConnection" />
               </connections>
               <outputs>
                 <output
-                  refId="Package\Upload players\Flat File Source.Outputs[Flat File Source Output]"
+                  refId="Package\Upload clubs\Flat File Source.Outputs[Flat File Source Output]"
                   name="Flat File Source Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Upload players\Flat File Source.Outputs[Flat File Source Output].Columns[player_id]"
-                      codePage="65001"
-                      dataType="str"
+                      refId="Package\Upload clubs\Flat File Source.Outputs[Flat File Source Output].Columns[name]"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Upload players\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[player_id]"
+                      externalMetadataColumnId="Package\Upload clubs\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[name]"
                       length="50"
-                      lineageId="Package\Upload players\Flat File Source.Outputs[Flat File Source Output].Columns[player_id]"
-                      name="player_id"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Upload players\Flat File Source.Outputs[Flat File Source Output].Columns[name]"
-                      codePage="65001"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Upload players\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[name]"
-                      length="50"
-                      lineageId="Package\Upload players\Flat File Source.Outputs[Flat File Source Output].Columns[name]"
+                      lineageId="Package\Upload clubs\Flat File Source.Outputs[Flat File Source Output].Columns[name]"
                       name="name"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -346,15 +702,13 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Upload players\Flat File Source.Outputs[Flat File Source Output].Columns[current_club_id]"
-                      codePage="65001"
-                      dataType="str"
+                      refId="Package\Upload clubs\Flat File Source.Outputs[Flat File Source Output].Columns[club_id]"
+                      dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Upload players\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[current_club_id]"
-                      length="50"
-                      lineageId="Package\Upload players\Flat File Source.Outputs[Flat File Source Output].Columns[current_club_id]"
-                      name="current_club_id"
+                      externalMetadataColumnId="Package\Upload clubs\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[club_id]"
+                      lineageId="Package\Upload clubs\Flat File Source.Outputs[Flat File Source Output].Columns[club_id]"
+                      name="club_id"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -368,431 +722,14 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Upload players\Flat File Source.Outputs[Flat File Source Output].Columns[current_club_name]"
-                      codePage="65001"
-                      dataType="str"
+                      refId="Package\Upload clubs\Flat File Source.Outputs[Flat File Source Output].Columns[domestic_competition_id]"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Upload players\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[current_club_name]"
+                      externalMetadataColumnId="Package\Upload clubs\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[domestic_competition_id]"
                       length="50"
-                      lineageId="Package\Upload players\Flat File Source.Outputs[Flat File Source Output].Columns[current_club_name]"
-                      name="current_club_name"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Upload players\Flat File Source.Outputs[Flat File Source Output].Columns[country_of_citizenship]"
-                      dataType="ui4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Upload players\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[country_of_citizenship]"
-                      lineageId="Package\Upload players\Flat File Source.Outputs[Flat File Source Output].Columns[country_of_citizenship]"
-                      name="country_of_citizenship"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Upload players\Flat File Source.Outputs[Flat File Source Output].Columns[country_of_birth]"
-                      codePage="65001"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Upload players\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[country_of_birth]"
-                      length="50"
-                      lineageId="Package\Upload players\Flat File Source.Outputs[Flat File Source Output].Columns[country_of_birth]"
-                      name="country_of_birth"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Upload players\Flat File Source.Outputs[Flat File Source Output].Columns[city_of_birth]"
-                      codePage="65001"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Upload players\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[city_of_birth]"
-                      length="50"
-                      lineageId="Package\Upload players\Flat File Source.Outputs[Flat File Source Output].Columns[city_of_birth]"
-                      name="city_of_birth"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Upload players\Flat File Source.Outputs[Flat File Source Output].Columns[date_of_birth]"
-                      codePage="65001"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Upload players\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[date_of_birth]"
-                      length="50"
-                      lineageId="Package\Upload players\Flat File Source.Outputs[Flat File Source Output].Columns[date_of_birth]"
-                      name="date_of_birth"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Upload players\Flat File Source.Outputs[Flat File Source Output].Columns[position]"
-                      codePage="65001"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Upload players\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[position]"
-                      length="50"
-                      lineageId="Package\Upload players\Flat File Source.Outputs[Flat File Source Output].Columns[position]"
-                      name="position"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Upload players\Flat File Source.Outputs[Flat File Source Output].Columns[sub_position]"
-                      codePage="65001"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Upload players\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[sub_position]"
-                      length="50"
-                      lineageId="Package\Upload players\Flat File Source.Outputs[Flat File Source Output].Columns[sub_position]"
-                      name="sub_position"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Upload players\Flat File Source.Outputs[Flat File Source Output].Columns[foot]"
-                      codePage="65001"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Upload players\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[foot]"
-                      length="50"
-                      lineageId="Package\Upload players\Flat File Source.Outputs[Flat File Source Output].Columns[foot]"
-                      name="foot"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Upload players\Flat File Source.Outputs[Flat File Source Output].Columns[height_in_cm]"
-                      codePage="65001"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Upload players\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[height_in_cm]"
-                      length="50"
-                      lineageId="Package\Upload players\Flat File Source.Outputs[Flat File Source Output].Columns[height_in_cm]"
-                      name="height_in_cm"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Upload players\Flat File Source.Outputs[Flat File Source Output].Columns[market_value_in_eur]"
-                      codePage="65001"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Upload players\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[market_value_in_eur]"
-                      length="50"
-                      lineageId="Package\Upload players\Flat File Source.Outputs[Flat File Source Output].Columns[market_value_in_eur]"
-                      name="market_value_in_eur"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Upload players\Flat File Source.Outputs[Flat File Source Output].Columns[highest_market_value_in_eur]"
-                      codePage="65001"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Upload players\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[highest_market_value_in_eur]"
-                      length="50"
-                      lineageId="Package\Upload players\Flat File Source.Outputs[Flat File Source Output].Columns[highest_market_value_in_eur]"
-                      name="highest_market_value_in_eur"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Upload players\Flat File Source.Outputs[Flat File Source Output].Columns[agent_name]"
-                      codePage="65001"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Upload players\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[agent_name]"
-                      length="50"
-                      lineageId="Package\Upload players\Flat File Source.Outputs[Flat File Source Output].Columns[agent_name]"
-                      name="agent_name"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Upload players\Flat File Source.Outputs[Flat File Source Output].Columns[contract_expiration_date]"
-                      codePage="65001"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Upload players\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[contract_expiration_date]"
-                      length="50"
-                      lineageId="Package\Upload players\Flat File Source.Outputs[Flat File Source Output].Columns[contract_expiration_date]"
-                      name="contract_expiration_date"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Upload players\Flat File Source.Outputs[Flat File Source Output].Columns[current_club_domestic_competition_id]"
-                      codePage="65001"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Upload players\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[current_club_domestic_competition_id]"
-                      length="50"
-                      lineageId="Package\Upload players\Flat File Source.Outputs[Flat File Source Output].Columns[current_club_domestic_competition_id]"
-                      name="current_club_domestic_competition_id"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Upload players\Flat File Source.Outputs[Flat File Source Output].Columns[first_name]"
-                      codePage="65001"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Upload players\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[first_name]"
-                      length="50"
-                      lineageId="Package\Upload players\Flat File Source.Outputs[Flat File Source Output].Columns[first_name]"
-                      name="first_name"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Upload players\Flat File Source.Outputs[Flat File Source Output].Columns[last_name]"
-                      codePage="65001"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Upload players\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[last_name]"
-                      length="50"
-                      lineageId="Package\Upload players\Flat File Source.Outputs[Flat File Source Output].Columns[last_name]"
-                      name="last_name"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Upload players\Flat File Source.Outputs[Flat File Source Output].Columns[player_code]"
-                      codePage="65001"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Upload players\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[player_code]"
-                      length="50"
-                      lineageId="Package\Upload players\Flat File Source.Outputs[Flat File Source Output].Columns[player_code]"
-                      name="player_code"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Upload players\Flat File Source.Outputs[Flat File Source Output].Columns[image_url]"
-                      codePage="65001"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Upload players\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[image_url]"
-                      length="50"
-                      lineageId="Package\Upload players\Flat File Source.Outputs[Flat File Source Output].Columns[image_url]"
-                      name="image_url"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Upload players\Flat File Source.Outputs[Flat File Source Output].Columns[last_season]"
-                      codePage="65001"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Upload players\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[last_season]"
-                      length="50"
-                      lineageId="Package\Upload players\Flat File Source.Outputs[Flat File Source Output].Columns[last_season]"
-                      name="last_season"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Upload players\Flat File Source.Outputs[Flat File Source Output].Columns[url]"
-                      codePage="65001"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Upload players\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[url]"
-                      length="50"
-                      lineageId="Package\Upload players\Flat File Source.Outputs[Flat File Source Output].Columns[url]"
-                      name="url"
+                      lineageId="Package\Upload clubs\Flat File Source.Outputs[Flat File Source Output].Columns[domestic_competition_id]"
+                      name="domestic_competition_id"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -809,165 +746,115 @@
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Upload players\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[player_id]"
-                      codePage="65001"
-                      dataType="str"
-                      length="50"
-                      name="player_id" />
-                    <externalMetadataColumn
-                      refId="Package\Upload players\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[name]"
-                      codePage="65001"
-                      dataType="str"
+                      refId="Package\Upload clubs\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[name]"
+                      dataType="wstr"
                       length="50"
                       name="name" />
                     <externalMetadataColumn
-                      refId="Package\Upload players\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[current_club_id]"
-                      codePage="65001"
-                      dataType="str"
-                      length="50"
-                      name="current_club_id" />
-                    <externalMetadataColumn
-                      refId="Package\Upload players\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[current_club_name]"
-                      codePage="65001"
-                      dataType="str"
-                      length="50"
-                      name="current_club_name" />
-                    <externalMetadataColumn
-                      refId="Package\Upload players\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[country_of_citizenship]"
-                      dataType="ui4"
-                      name="country_of_citizenship" />
-                    <externalMetadataColumn
-                      refId="Package\Upload players\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[country_of_birth]"
-                      codePage="65001"
-                      dataType="str"
-                      length="50"
-                      name="country_of_birth" />
-                    <externalMetadataColumn
-                      refId="Package\Upload players\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[city_of_birth]"
-                      codePage="65001"
-                      dataType="str"
-                      length="50"
-                      name="city_of_birth" />
-                    <externalMetadataColumn
-                      refId="Package\Upload players\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[date_of_birth]"
-                      codePage="65001"
-                      dataType="str"
-                      length="50"
-                      name="date_of_birth" />
-                    <externalMetadataColumn
-                      refId="Package\Upload players\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[position]"
-                      codePage="65001"
-                      dataType="str"
-                      length="50"
-                      name="position" />
-                    <externalMetadataColumn
-                      refId="Package\Upload players\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[sub_position]"
-                      codePage="65001"
-                      dataType="str"
-                      length="50"
-                      name="sub_position" />
-                    <externalMetadataColumn
-                      refId="Package\Upload players\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[foot]"
-                      codePage="65001"
-                      dataType="str"
-                      length="50"
-                      name="foot" />
-                    <externalMetadataColumn
-                      refId="Package\Upload players\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[height_in_cm]"
-                      codePage="65001"
-                      dataType="str"
-                      length="50"
-                      name="height_in_cm" />
-                    <externalMetadataColumn
-                      refId="Package\Upload players\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[market_value_in_eur]"
-                      codePage="65001"
-                      dataType="str"
-                      length="50"
-                      name="market_value_in_eur" />
-                    <externalMetadataColumn
-                      refId="Package\Upload players\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[highest_market_value_in_eur]"
-                      codePage="65001"
-                      dataType="str"
-                      length="50"
-                      name="highest_market_value_in_eur" />
-                    <externalMetadataColumn
-                      refId="Package\Upload players\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[agent_name]"
-                      codePage="65001"
-                      dataType="str"
-                      length="50"
-                      name="agent_name" />
-                    <externalMetadataColumn
-                      refId="Package\Upload players\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[contract_expiration_date]"
-                      codePage="65001"
-                      dataType="str"
-                      length="50"
-                      name="contract_expiration_date" />
-                    <externalMetadataColumn
-                      refId="Package\Upload players\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[current_club_domestic_competition_id]"
-                      codePage="65001"
-                      dataType="str"
-                      length="50"
-                      name="current_club_domestic_competition_id" />
-                    <externalMetadataColumn
-                      refId="Package\Upload players\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[first_name]"
-                      codePage="65001"
-                      dataType="str"
-                      length="50"
-                      name="first_name" />
-                    <externalMetadataColumn
-                      refId="Package\Upload players\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[last_name]"
-                      codePage="65001"
-                      dataType="str"
-                      length="50"
-                      name="last_name" />
-                    <externalMetadataColumn
-                      refId="Package\Upload players\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[player_code]"
-                      codePage="65001"
-                      dataType="str"
-                      length="50"
-                      name="player_code" />
-                    <externalMetadataColumn
-                      refId="Package\Upload players\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[image_url]"
-                      codePage="65001"
-                      dataType="str"
-                      length="50"
-                      name="image_url" />
-                    <externalMetadataColumn
-                      refId="Package\Upload players\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[last_season]"
-                      codePage="65001"
-                      dataType="str"
-                      length="50"
-                      name="last_season" />
-                    <externalMetadataColumn
-                      refId="Package\Upload players\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[url]"
+                      refId="Package\Upload clubs\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[url]"
                       codePage="65001"
                       dataType="str"
                       length="50"
                       name="url" />
+                    <externalMetadataColumn
+                      refId="Package\Upload clubs\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[club_id]"
+                      dataType="i4"
+                      name="club_id" />
+                    <externalMetadataColumn
+                      refId="Package\Upload clubs\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[club_code]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="club_code" />
+                    <externalMetadataColumn
+                      refId="Package\Upload clubs\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[domestic_competition_id]"
+                      dataType="wstr"
+                      length="50"
+                      name="domestic_competition_id" />
+                    <externalMetadataColumn
+                      refId="Package\Upload clubs\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[total_market_value]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="total_market_value" />
+                    <externalMetadataColumn
+                      refId="Package\Upload clubs\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[squad_size]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="squad_size" />
+                    <externalMetadataColumn
+                      refId="Package\Upload clubs\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[average_age]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="average_age" />
+                    <externalMetadataColumn
+                      refId="Package\Upload clubs\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[foreigners_number]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="foreigners_number" />
+                    <externalMetadataColumn
+                      refId="Package\Upload clubs\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[foreigners_percentage]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="foreigners_percentage" />
+                    <externalMetadataColumn
+                      refId="Package\Upload clubs\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[national_team_players]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="national_team_players" />
+                    <externalMetadataColumn
+                      refId="Package\Upload clubs\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[stadium_name]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="stadium_name" />
+                    <externalMetadataColumn
+                      refId="Package\Upload clubs\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[stadium_seats]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="stadium_seats" />
+                    <externalMetadataColumn
+                      refId="Package\Upload clubs\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[net_transfer_record]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="net_transfer_record" />
+                    <externalMetadataColumn
+                      refId="Package\Upload clubs\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[coach_name]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="coach_name" />
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\Upload players\Flat File Source.Outputs[Flat File Source Error Output]"
+                  refId="Package\Upload clubs\Flat File Source.Outputs[Flat File Source Error Output]"
                   isErrorOut="true"
                   name="Flat File Source Error Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Upload players\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
-                      codePage="65001"
+                      refId="Package\Upload clubs\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1250"
                       dataType="text"
                       description="Flat File Source Error Output Column"
-                      lineageId="Package\Upload players\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      lineageId="Package\Upload clubs\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
                       name="Flat File Source Error Output Column" />
                     <outputColumn
-                      refId="Package\Upload players\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      refId="Package\Upload clubs\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Upload players\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Upload clubs\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Upload players\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      refId="Package\Upload clubs\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Upload players\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Upload clubs\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -976,11 +863,11 @@
               </outputs>
             </component>
             <component
-              refId="Package\Upload players\OLE DB Destination"
+              refId="Package\Upload clubs\OLE DB Destination 1"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
               description="OLE DB Destination"
-              name="OLE DB Destination"
+              name="OLE DB Destination 1"
               usesDispositions="true"
               version="4">
               <properties>
@@ -991,7 +878,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[d_players]</property>
+                  name="OpenRowset">[dbo].[d_clubs]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -1017,11 +904,11 @@
                 <property
                   dataType="System.Boolean"
                   description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepIdentity">false</property>
+                  name="FastLoadKeepIdentity">true</property>
                 <property
                   dataType="System.Boolean"
                   description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepNulls">false</property>
+                  name="FastLoadKeepNulls">true</property>
                 <property
                   dataType="System.String"
                   description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
@@ -1033,7 +920,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Upload players\OLE DB Destination.Connections[OleDbConnection]"
+                  refId="Package\Upload clubs\OLE DB Destination 1.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[hurtownia_s26462]"
                   connectionManagerRefId="Package.ConnectionManagers[hurtownia_s26462]"
                   description="The OLE DB runtime connection used to access the database."
@@ -1041,118 +928,70 @@
               </connections>
               <inputs>
                 <input
-                  refId="Package\Upload players\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  refId="Package\Upload clubs\OLE DB Destination 1.Inputs[OLE DB Destination Input]"
                   errorOrTruncationOperation="Insert"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Upload players\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[name]"
-                      cachedCodepage="65001"
-                      cachedDataType="str"
+                      refId="Package\Upload clubs\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[name]"
+                      cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="name"
-                      externalMetadataColumnId="Package\Upload players\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[name]"
-                      lineageId="Package\Upload players\Flat File Source.Outputs[Flat File Source Output].Columns[name]" />
+                      externalMetadataColumnId="Package\Upload clubs\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[name]"
+                      lineageId="Package\Upload clubs\Flat File Source.Outputs[Flat File Source Output].Columns[name]" />
                     <inputColumn
-                      refId="Package\Upload players\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[position]"
-                      cachedCodepage="65001"
-                      cachedDataType="str"
+                      refId="Package\Upload clubs\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[club_id]"
+                      cachedDataType="i4"
+                      cachedName="club_id"
+                      externalMetadataColumnId="Package\Upload clubs\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[id]"
+                      lineageId="Package\Upload clubs\Flat File Source.Outputs[Flat File Source Output].Columns[club_id]" />
+                    <inputColumn
+                      refId="Package\Upload clubs\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[domestic_competition_id]"
+                      cachedDataType="wstr"
                       cachedLength="50"
-                      cachedName="position"
-                      externalMetadataColumnId="Package\Upload players\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[position]"
-                      lineageId="Package\Upload players\Flat File Source.Outputs[Flat File Source Output].Columns[position]" />
-                    <inputColumn
-                      refId="Package\Upload players\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[date_of_birth]"
-                      cachedCodepage="65001"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="date_of_birth"
-                      externalMetadataColumnId="Package\Upload players\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[birth_date]"
-                      lineageId="Package\Upload players\Flat File Source.Outputs[Flat File Source Output].Columns[date_of_birth]" />
-                    <inputColumn
-                      refId="Package\Upload players\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[foot]"
-                      cachedCodepage="65001"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="foot"
-                      externalMetadataColumnId="Package\Upload players\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[dominant_foot]"
-                      lineageId="Package\Upload players\Flat File Source.Outputs[Flat File Source Output].Columns[foot]" />
-                    <inputColumn
-                      refId="Package\Upload players\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[country_of_citizenship]"
-                      cachedDataType="ui4"
-                      cachedName="country_of_citizenship"
-                      externalMetadataColumnId="Package\Upload players\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[nationality]"
-                      lineageId="Package\Upload players\Flat File Source.Outputs[Flat File Source Output].Columns[country_of_citizenship]" />
-                    <inputColumn
-                      refId="Package\Upload players\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[current_club_id]"
-                      cachedCodepage="65001"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="current_club_id"
-                      externalMetadataColumnId="Package\Upload players\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[id_club]"
-                      lineageId="Package\Upload players\Flat File Source.Outputs[Flat File Source Output].Columns[current_club_id]" />
+                      cachedName="domestic_competition_id"
+                      externalMetadataColumnId="Package\Upload clubs\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[league]"
+                      lineageId="Package\Upload clubs\Flat File Source.Outputs[Flat File Source Output].Columns[domestic_competition_id]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Upload players\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[id]"
+                      refId="Package\Upload clubs\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[id]"
                       dataType="i4"
                       name="id" />
                     <externalMetadataColumn
-                      refId="Package\Upload players\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[name]"
-                      codePage="1250"
-                      dataType="str"
+                      refId="Package\Upload clubs\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[name]"
+                      dataType="wstr"
                       length="50"
                       name="name" />
                     <externalMetadataColumn
-                      refId="Package\Upload players\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[birth_date]"
-                      dataType="dbDate"
-                      name="birth_date" />
-                    <externalMetadataColumn
-                      refId="Package\Upload players\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[position]"
-                      codePage="1250"
-                      dataType="str"
+                      refId="Package\Upload clubs\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[league]"
+                      dataType="wstr"
                       length="50"
-                      name="position" />
-                    <externalMetadataColumn
-                      refId="Package\Upload players\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[dominant_foot]"
-                      codePage="1250"
-                      dataType="str"
-                      length="50"
-                      name="dominant_foot" />
-                    <externalMetadataColumn
-                      refId="Package\Upload players\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[nationality]"
-                      codePage="1250"
-                      dataType="str"
-                      length="50"
-                      name="nationality" />
-                    <externalMetadataColumn
-                      refId="Package\Upload players\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[id_club]"
-                      dataType="i4"
-                      name="id_club" />
+                      name="league" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Upload players\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  refId="Package\Upload clubs\OLE DB Destination 1.Outputs[OLE DB Destination Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\Upload players\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  synchronousInputId="Package\Upload clubs\OLE DB Destination 1.Inputs[OLE DB Destination Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Upload players\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      refId="Package\Upload clubs\OLE DB Destination 1.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Upload players\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Upload clubs\OLE DB Destination 1.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Upload players\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      refId="Package\Upload clubs\OLE DB Destination 1.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Upload players\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Upload clubs\OLE DB Destination 1.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -1163,10 +1002,10 @@
           </components>
           <paths>
             <path
-              refId="Package\Upload players.Paths[Flat File Source Output]"
-              endId="Package\Upload players\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              refId="Package\Upload clubs.Paths[Flat File Source Output]"
+              endId="Package\Upload clubs\OLE DB Destination 1.Inputs[OLE DB Destination Input]"
               name="Flat File Source Output"
-              startId="Package\Upload players\Flat File Source.Outputs[Flat File Source Output]" />
+              startId="Package\Upload clubs\Flat File Source.Outputs[Flat File Source Output]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -1185,39 +1024,39 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
-          Size="152,42"
-          Id="Package\Upload players"
+          Size="143,42"
+          Id="Package\Upload clubs"
           TopLeft="35.5,35.5" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
   <TaskHost
-    design-time-name="Package\Upload players">
+    design-time-name="Package\Upload clubs">
     <LayoutInfo>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="177,42"
-          Id="Package\Upload players\OLE DB Destination"
-          TopLeft="76,143" />
-        <NodeLayout
           Size="156,42"
-          Id="Package\Upload players\Flat File Source"
-          TopLeft="86,24" />
+          Id="Package\Upload clubs\Flat File Source"
+          TopLeft="286,57" />
+        <NodeLayout
+          Size="186,42"
+          Id="Package\Upload clubs\OLE DB Destination 1"
+          TopLeft="274,206" />
         <EdgeLayout
-          Id="Package\Upload players.Paths[Flat File Source Output]"
-          TopLeft="164.25,66">
+          Id="Package\Upload clubs.Paths[Flat File Source Output]"
+          TopLeft="365.5,99">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,77"
+              EndConnector="0,107"
               Start="0,0"
-              End="0,69.5">
+              End="0,99.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,69.5" />
+                    End="0,99.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1230,7 +1069,7 @@
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Upload players\OLE DB Destination">
+    design-time-name="Package\Upload clubs\OLE DB Destination 1">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
