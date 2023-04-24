@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="66"
-  DTS:VersionGUID="{47859F67-145D-4187-9FC7-388C8944F1B5}">
+  DTS:VersionBuild="67"
+  DTS:VersionGUID="{88F532B0-142D-4274-B883-9E0A52D2F0E0}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -1153,228 +1153,11 @@
           version="1">
           <components>
             <component
-              refId="Package\Upload competitions\Flat File Source"
-              componentClassID="Microsoft.FlatFileSource"
-              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
-              description="Flat File Source"
-              localeId="1045"
-              name="Flat File Source"
-              usesDispositions="true"
-              version="1">
-              <properties>
-                <property
-                  dataType="System.Boolean"
-                  description="Specifies whether zero-length columns are treated as null."
-                  name="RetainNulls">true</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
-                  name="FileNameColumnName"></property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Upload competitions\Flat File Source.Connections[FlatFileConnection]"
-                  connectionManagerID="Package.ConnectionManagers[competitions_csv]"
-                  connectionManagerRefId="Package.ConnectionManagers[competitions_csv]"
-                  name="FlatFileConnection" />
-              </connections>
-              <outputs>
-                <output
-                  refId="Package\Upload competitions\Flat File Source.Outputs[Flat File Source Output]"
-                  name="Flat File Source Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Upload competitions\Flat File Source.Outputs[Flat File Source Output].Columns[name]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Upload competitions\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[name]"
-                      length="50"
-                      lineageId="Package\Upload competitions\Flat File Source.Outputs[Flat File Source Output].Columns[name]"
-                      name="name"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Upload competitions\Flat File Source.Outputs[Flat File Source Output].Columns[competition_id]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Upload competitions\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[competition_id]"
-                      length="10"
-                      lineageId="Package\Upload competitions\Flat File Source.Outputs[Flat File Source Output].Columns[competition_id]"
-                      name="competition_id"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Upload competitions\Flat File Source.Outputs[Flat File Source Output].Columns[type]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Upload competitions\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[type]"
-                      length="50"
-                      lineageId="Package\Upload competitions\Flat File Source.Outputs[Flat File Source Output].Columns[type]"
-                      name="type"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Upload competitions\Flat File Source.Outputs[Flat File Source Output].Columns[sub_type]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Upload competitions\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[sub_type]"
-                      length="50"
-                      lineageId="Package\Upload competitions\Flat File Source.Outputs[Flat File Source Output].Columns[sub_type]"
-                      name="sub_type"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                  </outputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Upload competitions\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[name]"
-                      dataType="wstr"
-                      length="50"
-                      name="name" />
-                    <externalMetadataColumn
-                      refId="Package\Upload competitions\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[url]"
-                      codePage="65001"
-                      dataType="str"
-                      length="50"
-                      name="url" />
-                    <externalMetadataColumn
-                      refId="Package\Upload competitions\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[competition_id]"
-                      dataType="wstr"
-                      length="10"
-                      name="competition_id" />
-                    <externalMetadataColumn
-                      refId="Package\Upload competitions\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[competition_code]"
-                      codePage="65001"
-                      dataType="str"
-                      length="50"
-                      name="competition_code" />
-                    <externalMetadataColumn
-                      refId="Package\Upload competitions\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[type]"
-                      dataType="wstr"
-                      length="50"
-                      name="type" />
-                    <externalMetadataColumn
-                      refId="Package\Upload competitions\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[sub_type]"
-                      dataType="wstr"
-                      length="50"
-                      name="sub_type" />
-                    <externalMetadataColumn
-                      refId="Package\Upload competitions\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[country_id]"
-                      codePage="65001"
-                      dataType="str"
-                      length="50"
-                      name="country_id" />
-                    <externalMetadataColumn
-                      refId="Package\Upload competitions\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[country_name]"
-                      codePage="65001"
-                      dataType="str"
-                      length="50"
-                      name="country_name" />
-                    <externalMetadataColumn
-                      refId="Package\Upload competitions\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[country_latitude]"
-                      codePage="65001"
-                      dataType="str"
-                      length="50"
-                      name="country_latitude" />
-                    <externalMetadataColumn
-                      refId="Package\Upload competitions\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[country_longitude]"
-                      codePage="65001"
-                      dataType="str"
-                      length="50"
-                      name="country_longitude" />
-                    <externalMetadataColumn
-                      refId="Package\Upload competitions\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[domestic_league_code]"
-                      codePage="65001"
-                      dataType="str"
-                      length="50"
-                      name="domestic_league_code" />
-                    <externalMetadataColumn
-                      refId="Package\Upload competitions\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[confederation]"
-                      codePage="65001"
-                      dataType="str"
-                      length="50"
-                      name="confederation" />
-                  </externalMetadataColumns>
-                </output>
-                <output
-                  refId="Package\Upload competitions\Flat File Source.Outputs[Flat File Source Error Output]"
-                  isErrorOut="true"
-                  name="Flat File Source Error Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Upload competitions\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
-                      codePage="65001"
-                      dataType="text"
-                      description="Flat File Source Error Output Column"
-                      lineageId="Package\Upload competitions\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
-                      name="Flat File Source Error Output Column" />
-                    <outputColumn
-                      refId="Package\Upload competitions\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Upload competitions\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Upload competitions\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Upload competitions\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\Upload competitions\OLE DB Destination"
+              refId="Package\Upload competitions\d_competitions"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
               description="OLE DB Destination"
-              name="OLE DB Destination"
+              name="d_competitions"
               usesDispositions="true"
               version="4">
               <properties>
@@ -1427,7 +1210,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Upload competitions\OLE DB Destination.Connections[OleDbConnection]"
+                  refId="Package\Upload competitions\d_competitions.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[hurtownia_s26462]"
                   connectionManagerRefId="Package.ConnectionManagers[hurtownia_s26462]"
                   description="The OLE DB runtime connection used to access the database."
@@ -1435,47 +1218,47 @@
               </connections>
               <inputs>
                 <input
-                  refId="Package\Upload competitions\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  refId="Package\Upload competitions\d_competitions.Inputs[OLE DB Destination Input]"
                   errorOrTruncationOperation="Insert"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Upload competitions\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[name]"
+                      refId="Package\Upload competitions\d_competitions.Inputs[OLE DB Destination Input].Columns[name]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="name"
-                      externalMetadataColumnId="Package\Upload competitions\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[name]"
-                      lineageId="Package\Upload competitions\Flat File Source.Outputs[Flat File Source Output].Columns[name]" />
+                      externalMetadataColumnId="Package\Upload competitions\d_competitions.Inputs[OLE DB Destination Input].ExternalColumns[name]"
+                      lineageId="Package\Upload competitions\players_csv.Outputs[Flat File Source Output].Columns[name]" />
                     <inputColumn
-                      refId="Package\Upload competitions\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[knockout_stage]"
+                      refId="Package\Upload competitions\d_competitions.Inputs[OLE DB Destination Input].Columns[knockout_stage]"
                       cachedDataType="bool"
                       cachedName="knockout_stage"
-                      externalMetadataColumnId="Package\Upload competitions\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[knockout_stage]"
-                      lineageId="Package\Upload competitions\Script Component.Outputs[Output 0].Columns[knockout_stage]" />
+                      externalMetadataColumnId="Package\Upload competitions\d_competitions.Inputs[OLE DB Destination Input].ExternalColumns[knockout_stage]"
+                      lineageId="Package\Upload competitions\wyznaczenie knocout_stage.Outputs[Output 0].Columns[knockout_stage]" />
                     <inputColumn
-                      refId="Package\Upload competitions\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[competition_id]"
+                      refId="Package\Upload competitions\d_competitions.Inputs[OLE DB Destination Input].Columns[competition_id]"
                       cachedDataType="wstr"
                       cachedLength="10"
                       cachedName="competition_id"
-                      externalMetadataColumnId="Package\Upload competitions\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[id]"
-                      lineageId="Package\Upload competitions\Flat File Source.Outputs[Flat File Source Output].Columns[competition_id]" />
+                      externalMetadataColumnId="Package\Upload competitions\d_competitions.Inputs[OLE DB Destination Input].ExternalColumns[id]"
+                      lineageId="Package\Upload competitions\players_csv.Outputs[Flat File Source Output].Columns[competition_id]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Upload competitions\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[id]"
+                      refId="Package\Upload competitions\d_competitions.Inputs[OLE DB Destination Input].ExternalColumns[id]"
                       dataType="wstr"
                       length="10"
                       name="id" />
                     <externalMetadataColumn
-                      refId="Package\Upload competitions\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[name]"
+                      refId="Package\Upload competitions\d_competitions.Inputs[OLE DB Destination Input].ExternalColumns[name]"
                       dataType="wstr"
                       length="255"
                       name="name" />
                     <externalMetadataColumn
-                      refId="Package\Upload competitions\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[knockout_stage]"
+                      refId="Package\Upload competitions\d_competitions.Inputs[OLE DB Destination Input].ExternalColumns[knockout_stage]"
                       dataType="bool"
                       name="knockout_stage" />
                   </externalMetadataColumns>
@@ -1483,22 +1266,22 @@
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Upload competitions\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  refId="Package\Upload competitions\d_competitions.Outputs[OLE DB Destination Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\Upload competitions\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  synchronousInputId="Package\Upload competitions\d_competitions.Inputs[OLE DB Destination Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Upload competitions\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      refId="Package\Upload competitions\d_competitions.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Upload competitions\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Upload competitions\d_competitions.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Upload competitions\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      refId="Package\Upload competitions\d_competitions.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Upload competitions\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Upload competitions\d_competitions.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -1507,11 +1290,228 @@
               </outputs>
             </component>
             <component
-              refId="Package\Upload competitions\Script Component"
+              refId="Package\Upload competitions\players_csv"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1045"
+              name="players_csv"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">true</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Upload competitions\players_csv.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[competitions_csv]"
+                  connectionManagerRefId="Package.ConnectionManagers[competitions_csv]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Upload competitions\players_csv.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Upload competitions\players_csv.Outputs[Flat File Source Output].Columns[name]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Upload competitions\players_csv.Outputs[Flat File Source Output].ExternalColumns[name]"
+                      length="50"
+                      lineageId="Package\Upload competitions\players_csv.Outputs[Flat File Source Output].Columns[name]"
+                      name="name"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Upload competitions\players_csv.Outputs[Flat File Source Output].Columns[competition_id]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Upload competitions\players_csv.Outputs[Flat File Source Output].ExternalColumns[competition_id]"
+                      length="10"
+                      lineageId="Package\Upload competitions\players_csv.Outputs[Flat File Source Output].Columns[competition_id]"
+                      name="competition_id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Upload competitions\players_csv.Outputs[Flat File Source Output].Columns[type]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Upload competitions\players_csv.Outputs[Flat File Source Output].ExternalColumns[type]"
+                      length="50"
+                      lineageId="Package\Upload competitions\players_csv.Outputs[Flat File Source Output].Columns[type]"
+                      name="type"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Upload competitions\players_csv.Outputs[Flat File Source Output].Columns[sub_type]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Upload competitions\players_csv.Outputs[Flat File Source Output].ExternalColumns[sub_type]"
+                      length="50"
+                      lineageId="Package\Upload competitions\players_csv.Outputs[Flat File Source Output].Columns[sub_type]"
+                      name="sub_type"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Upload competitions\players_csv.Outputs[Flat File Source Output].ExternalColumns[name]"
+                      dataType="wstr"
+                      length="50"
+                      name="name" />
+                    <externalMetadataColumn
+                      refId="Package\Upload competitions\players_csv.Outputs[Flat File Source Output].ExternalColumns[url]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="url" />
+                    <externalMetadataColumn
+                      refId="Package\Upload competitions\players_csv.Outputs[Flat File Source Output].ExternalColumns[competition_id]"
+                      dataType="wstr"
+                      length="10"
+                      name="competition_id" />
+                    <externalMetadataColumn
+                      refId="Package\Upload competitions\players_csv.Outputs[Flat File Source Output].ExternalColumns[competition_code]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="competition_code" />
+                    <externalMetadataColumn
+                      refId="Package\Upload competitions\players_csv.Outputs[Flat File Source Output].ExternalColumns[type]"
+                      dataType="wstr"
+                      length="50"
+                      name="type" />
+                    <externalMetadataColumn
+                      refId="Package\Upload competitions\players_csv.Outputs[Flat File Source Output].ExternalColumns[sub_type]"
+                      dataType="wstr"
+                      length="50"
+                      name="sub_type" />
+                    <externalMetadataColumn
+                      refId="Package\Upload competitions\players_csv.Outputs[Flat File Source Output].ExternalColumns[country_id]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="country_id" />
+                    <externalMetadataColumn
+                      refId="Package\Upload competitions\players_csv.Outputs[Flat File Source Output].ExternalColumns[country_name]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="country_name" />
+                    <externalMetadataColumn
+                      refId="Package\Upload competitions\players_csv.Outputs[Flat File Source Output].ExternalColumns[country_latitude]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="country_latitude" />
+                    <externalMetadataColumn
+                      refId="Package\Upload competitions\players_csv.Outputs[Flat File Source Output].ExternalColumns[country_longitude]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="country_longitude" />
+                    <externalMetadataColumn
+                      refId="Package\Upload competitions\players_csv.Outputs[Flat File Source Output].ExternalColumns[domestic_league_code]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="domestic_league_code" />
+                    <externalMetadataColumn
+                      refId="Package\Upload competitions\players_csv.Outputs[Flat File Source Output].ExternalColumns[confederation]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="confederation" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Upload competitions\players_csv.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Upload competitions\players_csv.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="65001"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Upload competitions\players_csv.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Upload competitions\players_csv.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Upload competitions\players_csv.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Upload competitions\players_csv.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Upload competitions\players_csv.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Upload competitions\wyznaczenie knocout_stage"
               componentClassID="Microsoft.ManagedComponentHost"
               contactInfo="Includes and runs custom script code. For example, apply a business rule that limits the range of valid values in an &quot;income&quot; column or add values in two columns and calculate the average of the sum.;Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;13"
               description="Includes and runs custom script code. For example, apply a business rule that limits the range of valid values in an &quot;income&quot; column or add values in two columns and calculate the average of the sum."
-              name="Script Component"
+              name="wyznaczenie knocout_stage"
               version="13">
               <properties>
                 <property
@@ -2392,36 +2392,36 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
               </properties>
               <inputs>
                 <input
-                  refId="Package\Upload competitions\Script Component.Inputs[Input 0]"
+                  refId="Package\Upload competitions\wyznaczenie knocout_stage.Inputs[Input 0]"
                   hasSideEffects="true"
                   name="Input 0">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Upload competitions\Script Component.Inputs[Input 0].Columns[type]"
+                      refId="Package\Upload competitions\wyznaczenie knocout_stage.Inputs[Input 0].Columns[type]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="type"
-                      lineageId="Package\Upload competitions\Flat File Source.Outputs[Flat File Source Output].Columns[type]" />
+                      lineageId="Package\Upload competitions\players_csv.Outputs[Flat File Source Output].Columns[type]" />
                     <inputColumn
-                      refId="Package\Upload competitions\Script Component.Inputs[Input 0].Columns[sub_type]"
+                      refId="Package\Upload competitions\wyznaczenie knocout_stage.Inputs[Input 0].Columns[sub_type]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="sub_type"
-                      lineageId="Package\Upload competitions\Flat File Source.Outputs[Flat File Source Output].Columns[sub_type]" />
+                      lineageId="Package\Upload competitions\players_csv.Outputs[Flat File Source Output].Columns[sub_type]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Upload competitions\Script Component.Outputs[Output 0]"
+                  refId="Package\Upload competitions\wyznaczenie knocout_stage.Outputs[Output 0]"
                   name="Output 0"
-                  synchronousInputId="Package\Upload competitions\Script Component.Inputs[Input 0]">
+                  synchronousInputId="Package\Upload competitions\wyznaczenie knocout_stage.Inputs[Input 0]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Upload competitions\Script Component.Outputs[Output 0].Columns[knockout_stage]"
+                      refId="Package\Upload competitions\wyznaczenie knocout_stage.Outputs[Output 0].Columns[knockout_stage]"
                       dataType="bool"
-                      lineageId="Package\Upload competitions\Script Component.Outputs[Output 0].Columns[knockout_stage]"
+                      lineageId="Package\Upload competitions\wyznaczenie knocout_stage.Outputs[Output 0].Columns[knockout_stage]"
                       name="knockout_stage" />
                   </outputColumns>
                   <externalMetadataColumns />
@@ -2432,19 +2432,29 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
           <paths>
             <path
               refId="Package\Upload competitions.Paths[Flat File Source Output]"
-              endId="Package\Upload competitions\Script Component.Inputs[Input 0]"
+              endId="Package\Upload competitions\wyznaczenie knocout_stage.Inputs[Input 0]"
               name="Flat File Source Output"
-              startId="Package\Upload competitions\Flat File Source.Outputs[Flat File Source Output]" />
+              startId="Package\Upload competitions\players_csv.Outputs[Flat File Source Output]" />
             <path
               refId="Package\Upload competitions.Paths[Output 0]"
-              endId="Package\Upload competitions\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              endId="Package\Upload competitions\d_competitions.Inputs[OLE DB Destination Input]"
               name="Output 0"
-              startId="Package\Upload competitions\Script Component.Outputs[Output 0]" />
+              startId="Package\Upload competitions\wyznaczenie knocout_stage.Outputs[Output 0]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{C8A8E6B0-E4A7-4261-82B7-3839E8FA5597}"
+      DTS:From="Package\Upload competitions"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Upload clubs" />
+  </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
 <!--If you manually edit this section and make a mistake, you can delete it. -->
@@ -2456,15 +2466,37 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="143,42"
           Id="Package\Upload clubs"
-          TopLeft="84.5,172.5" />
+          TopLeft="77.5,160.5" />
         <NodeLayout
           Size="179,42"
           Id="Package\Upload competitions"
           TopLeft="55.5,56.5" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="147,98.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,62"
+              Start="0,0"
+              End="0,54.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,54.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -2525,31 +2557,31 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="156,42"
-          Id="Package\Upload competitions\Flat File Source"
-          TopLeft="96.5,15.5" />
+          Size="137,42"
+          Id="Package\Upload competitions\players_csv"
+          TopLeft="131.5,7.5" />
         <NodeLayout
-          Size="177,42"
-          Id="Package\Upload competitions\OLE DB Destination"
-          TopLeft="81.5,242.5" />
+          Size="153,42"
+          Id="Package\Upload competitions\d_competitions"
+          TopLeft="125.5,245.5" />
         <NodeLayout
-          Size="167,42"
-          Id="Package\Upload competitions\Script Component"
+          Size="216,42"
+          Id="Package\Upload competitions\wyznaczenie knocout_stage"
           TopLeft="91.5,115.5" />
         <EdgeLayout
           Id="Package\Upload competitions.Paths[Flat File Source Output]"
-          TopLeft="174.75,57.5">
+          TopLeft="199.75,49.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,58"
+              EndConnector="0,66"
               Start="0,0"
-              End="0,50.5">
+              End="0,58.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,50.5" />
+                    End="0,58.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2560,18 +2592,18 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Upload competitions.Paths[Output 0]"
-          TopLeft="172.5,157.5">
+          TopLeft="200.75,157.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,85"
+              EndConnector="0,88"
               Start="0,0"
-              End="0,77.5">
+              End="0,80.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,77.5" />
+                    End="0,80.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2584,7 +2616,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Upload competitions\OLE DB Destination">
+    design-time-name="Package\Upload competitions\d_competitions">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
