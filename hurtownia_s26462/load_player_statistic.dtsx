@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="7"
-  DTS:VersionGUID="{68B9A363-D9A8-4E52-B630-3613C534629F}">
+  DTS:VersionBuild="46"
+  DTS:VersionGUID="{32DB7A3C-1B4B-4045-810F-F34408ED1A47}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -35,11 +35,11 @@
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
+              DTS:MaximumWidth="20"
+              DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="appearance_id"
-              DTS:DTSID="{BBC05FAD-DB93-44C5-8CE6-51CB0CC87253}"
+              DTS:DTSID="{C1B61C88-1556-47A7-82F4-6D35B18479DA}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -47,7 +47,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="game_id"
-              DTS:DTSID="{9FA9AA2E-1874-49D1-A246-8012E4919793}"
+              DTS:DTSID="{0D36E274-4BB8-4DDA-A027-EC98407CF4A8}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -55,7 +55,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="player_id"
-              DTS:DTSID="{03CC45E7-763A-4EF1-A17C-105E79F6D1DD}"
+              DTS:DTSID="{95E54E24-D68B-4B8C-8592-4C0DBBA93979}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -63,34 +63,23 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="player_club_id"
-              DTS:DTSID="{B898D148-0906-47BE-8DAB-27A86379B65B}"
+              DTS:DTSID="{B706EFEE-6252-4C2F-A459-D4634A2B0CFE}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
+              DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="player_current_club_id"
-              DTS:DTSID="{120DB26F-FD38-4E82-BDDF-D872FDCCEF34}"
+              DTS:DTSID="{ED8D25E6-ADCE-4BD5-8FDF-D8DEDC97B8F5}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
+              DTS:DataType="7"
               DTS:TextQualified="True"
               DTS:ObjectName="date"
-              DTS:DTSID="{E8E67789-92CE-47CD-B3FA-A220C53CDC9A}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="player_name"
-              DTS:DTSID="{58AF9BFC-4ED2-4D9B-8E77-D25B7C9817FF}"
+              DTS:DTSID="{A7235F10-9B51-4B86-AA18-03F36BD6513C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -98,8 +87,17 @@
               DTS:MaximumWidth="50"
               DTS:DataType="130"
               DTS:TextQualified="True"
+              DTS:ObjectName="player_name"
+              DTS:DTSID="{6E7C6110-0471-49D1-AF1E-7DE437377E53}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="10"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
               DTS:ObjectName="competition_id"
-              DTS:DTSID="{8B79F508-1248-4AF4-A7F2-8C53CD65F7A2}"
+              DTS:DTSID="{556006A6-85B0-4822-9EEC-6472CB09015F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -107,7 +105,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="yellow_cards"
-              DTS:DTSID="{8FD61D0E-7B42-4623-A04F-D7770A208ACF}"
+              DTS:DTSID="{C14EE586-B12A-46BD-A44D-A5CF80686B78}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -115,7 +113,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="red_cards"
-              DTS:DTSID="{E4C527AA-9116-4CC6-A933-0FF6F48F5B70}"
+              DTS:DTSID="{AD40748D-A6E7-4B0B-95F1-B69F6DD3F999}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -123,15 +121,15 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="goals"
-              DTS:DTSID="{BB36058A-B1EE-48E3-80D4-DDC010E6C96C}"
+              DTS:DTSID="{F7214992-12D2-4E24-A493-0E099A63F5E0}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:DataType="16"
+              DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="assists"
-              DTS:DTSID="{49F2A79D-6058-458D-9D6C-34E2C20BBD9A}"
+              DTS:DTSID="{BE18BC10-1088-4BF5-A11E-A757AFB372CB}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -139,7 +137,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="minutes_played"
-              DTS:DTSID="{EF189646-F87B-4F42-941F-68A4B5072C24}"
+              DTS:DTSID="{1B29AAE0-4831-48ED-93EA-7CF0CFC8AE23}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -157,17 +155,48 @@
           DTS:ConnectionString="Data Source=DESKTOP-A7LBTN7\MSSQLSERVER01;Initial Catalog=hurtownia_s26462;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-Package1-{58D80DC5-6397-41F8-A2BC-CF0A25F53148}DESKTOP-A7LBTN7\MSSQLSERVER01.hurtownia_s26462;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[hurtownia_s26462 1]"
+      DTS:CreationName="ADO.NET:SQL"
+      DTS:DTSID="{A03DBFE5-ACCC-4917-B36B-192FBE8DF1E7}"
+      DTS:ObjectName="hurtownia_s26462 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=DESKTOP-A7LBTN7\MSSQLSERVER01;Integrated Security=SSPI;Connect Timeout=30;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
   <DTS:Variables />
   <DTS:Executables>
     <DTS:Executable
-      DTS:refId="Package\Upload f_player_statistic"
+      DTS:refId="Package\Load table f_player_statistic"
+      DTS:CreationName="Microsoft.DbMaintenanceTSQLExecuteTask"
+      DTS:Description="Execute T-SQL Statement Task"
+      DTS:DTSID="{915f980a-3d85-4ae4-a9c3-51e75b36a1fc}"
+      DTS:ExecutableType="Microsoft.DbMaintenanceTSQLExecuteTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Load table f_player_statistic"
+      DTS:TaskContact="Execute T-SQL Statement Task; Microsoft Corporation; Microsoft SQL Server v9; © 2004 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:SqlStatementSource="USE hurtownia_s26462;&#xA;&#xA;IF NOT EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'appearance' AND TABLE_SCHEMA = 'dbo')&#xA;BEGIN&#xA;    CREATE TABLE dbo.appearance (&#xA;    appearance_id NVARCHAR(20) PRIMARY KEY,&#xA;    game_id INT NULL,&#xA;    player_id INT NULL,&#xA;    player_club_id INT NULL,&#xA;    player_current_club_id INT NULL,&#xA;    date DATE NULL,&#xA;    player_name NVARCHAR(255) NULL,&#xA;    competition_id NVARCHAR(10) NULL,&#xA;    yellow_cards INT NULL,&#xA;    red_cards INT NULL,&#xA;    goals INT NULL,&#xA;    assists INT NULL,&#xA;    minutes_played INT NULL&#xA;);&#xA;END&#xA;"
+          SQLTask:ServerVersion="9"
+          SQLTask:ExtendedLogging="True"
+          SQLTask:LocalConnectionForLogging=""
+          SQLTask:TaskName=""
+          SQLTask:IgnoreDatabasesInNotOnlineState="False" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\prepare_data"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
-      DTS:DTSID="{5BAA4000-0CB9-4654-BD25-7006ABA528A4}"
+      DTS:DTSID="{5E3BD4E2-D1CE-43F4-B01D-5E0E0A3D15E4}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Upload f_player_statistic"
+      DTS:ObjectName="prepare_data"
       DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
       <DTS:Variables />
       <DTS:ObjectData>
@@ -175,7 +204,7 @@
           version="1">
           <components>
             <component
-              refId="Package\Upload f_player_statistic\appearances_csv"
+              refId="Package\prepare_data\appearances_csv"
               componentClassID="Microsoft.FlatFileSource"
               contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
               description="Flat File Source"
@@ -195,23 +224,44 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Upload f_player_statistic\appearances_csv.Connections[FlatFileConnection]"
+                  refId="Package\prepare_data\appearances_csv.Connections[FlatFileConnection]"
                   connectionManagerID="Package.ConnectionManagers[appearances_csv]"
                   connectionManagerRefId="Package.ConnectionManagers[appearances_csv]"
                   name="FlatFileConnection" />
               </connections>
               <outputs>
                 <output
-                  refId="Package\Upload f_player_statistic\appearances_csv.Outputs[Flat File Source Output]"
+                  refId="Package\prepare_data\appearances_csv.Outputs[Flat File Source Output]"
                   name="Flat File Source Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Upload f_player_statistic\appearances_csv.Outputs[Flat File Source Output].Columns[game_id]"
+                      refId="Package\prepare_data\appearances_csv.Outputs[Flat File Source Output].Columns[appearance_id]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\prepare_data\appearances_csv.Outputs[Flat File Source Output].ExternalColumns[appearance_id]"
+                      length="20"
+                      lineageId="Package\prepare_data\appearances_csv.Outputs[Flat File Source Output].Columns[appearance_id]"
+                      name="appearance_id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\prepare_data\appearances_csv.Outputs[Flat File Source Output].Columns[game_id]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Upload f_player_statistic\appearances_csv.Outputs[Flat File Source Output].ExternalColumns[game_id]"
-                      lineageId="Package\Upload f_player_statistic\appearances_csv.Outputs[Flat File Source Output].Columns[game_id]"
+                      externalMetadataColumnId="Package\prepare_data\appearances_csv.Outputs[Flat File Source Output].ExternalColumns[game_id]"
+                      lineageId="Package\prepare_data\appearances_csv.Outputs[Flat File Source Output].Columns[game_id]"
                       name="game_id"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -226,12 +276,12 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Upload f_player_statistic\appearances_csv.Outputs[Flat File Source Output].Columns[player_id]"
+                      refId="Package\prepare_data\appearances_csv.Outputs[Flat File Source Output].Columns[player_id]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Upload f_player_statistic\appearances_csv.Outputs[Flat File Source Output].ExternalColumns[player_id]"
-                      lineageId="Package\Upload f_player_statistic\appearances_csv.Outputs[Flat File Source Output].Columns[player_id]"
+                      externalMetadataColumnId="Package\prepare_data\appearances_csv.Outputs[Flat File Source Output].ExternalColumns[player_id]"
+                      lineageId="Package\prepare_data\appearances_csv.Outputs[Flat File Source Output].Columns[player_id]"
                       name="player_id"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -246,12 +296,12 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Upload f_player_statistic\appearances_csv.Outputs[Flat File Source Output].Columns[player_club_id]"
+                      refId="Package\prepare_data\appearances_csv.Outputs[Flat File Source Output].Columns[player_club_id]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Upload f_player_statistic\appearances_csv.Outputs[Flat File Source Output].ExternalColumns[player_club_id]"
-                      lineageId="Package\Upload f_player_statistic\appearances_csv.Outputs[Flat File Source Output].Columns[player_club_id]"
+                      externalMetadataColumnId="Package\prepare_data\appearances_csv.Outputs[Flat File Source Output].ExternalColumns[player_club_id]"
+                      lineageId="Package\prepare_data\appearances_csv.Outputs[Flat File Source Output].Columns[player_club_id]"
                       name="player_club_id"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -266,13 +316,74 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Upload f_player_statistic\appearances_csv.Outputs[Flat File Source Output].Columns[competition_id]"
+                      refId="Package\prepare_data\appearances_csv.Outputs[Flat File Source Output].Columns[player_current_club_id]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\prepare_data\appearances_csv.Outputs[Flat File Source Output].ExternalColumns[player_current_club_id]"
+                      lineageId="Package\prepare_data\appearances_csv.Outputs[Flat File Source Output].Columns[player_current_club_id]"
+                      name="player_current_club_id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\prepare_data\appearances_csv.Outputs[Flat File Source Output].Columns[date]"
+                      dataType="date"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\prepare_data\appearances_csv.Outputs[Flat File Source Output].ExternalColumns[date]"
+                      lineageId="Package\prepare_data\appearances_csv.Outputs[Flat File Source Output].Columns[date]"
+                      name="date"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\prepare_data\appearances_csv.Outputs[Flat File Source Output].Columns[player_name]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Upload f_player_statistic\appearances_csv.Outputs[Flat File Source Output].ExternalColumns[competition_id]"
+                      externalMetadataColumnId="Package\prepare_data\appearances_csv.Outputs[Flat File Source Output].ExternalColumns[player_name]"
                       length="50"
-                      lineageId="Package\Upload f_player_statistic\appearances_csv.Outputs[Flat File Source Output].Columns[competition_id]"
+                      lineageId="Package\prepare_data\appearances_csv.Outputs[Flat File Source Output].Columns[player_name]"
+                      name="player_name"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\prepare_data\appearances_csv.Outputs[Flat File Source Output].Columns[competition_id]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\prepare_data\appearances_csv.Outputs[Flat File Source Output].ExternalColumns[competition_id]"
+                      length="10"
+                      lineageId="Package\prepare_data\appearances_csv.Outputs[Flat File Source Output].Columns[competition_id]"
                       name="competition_id"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -287,12 +398,12 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Upload f_player_statistic\appearances_csv.Outputs[Flat File Source Output].Columns[yellow_cards]"
+                      refId="Package\prepare_data\appearances_csv.Outputs[Flat File Source Output].Columns[yellow_cards]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Upload f_player_statistic\appearances_csv.Outputs[Flat File Source Output].ExternalColumns[yellow_cards]"
-                      lineageId="Package\Upload f_player_statistic\appearances_csv.Outputs[Flat File Source Output].Columns[yellow_cards]"
+                      externalMetadataColumnId="Package\prepare_data\appearances_csv.Outputs[Flat File Source Output].ExternalColumns[yellow_cards]"
+                      lineageId="Package\prepare_data\appearances_csv.Outputs[Flat File Source Output].Columns[yellow_cards]"
                       name="yellow_cards"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -307,12 +418,12 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Upload f_player_statistic\appearances_csv.Outputs[Flat File Source Output].Columns[red_cards]"
+                      refId="Package\prepare_data\appearances_csv.Outputs[Flat File Source Output].Columns[red_cards]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Upload f_player_statistic\appearances_csv.Outputs[Flat File Source Output].ExternalColumns[red_cards]"
-                      lineageId="Package\Upload f_player_statistic\appearances_csv.Outputs[Flat File Source Output].Columns[red_cards]"
+                      externalMetadataColumnId="Package\prepare_data\appearances_csv.Outputs[Flat File Source Output].ExternalColumns[red_cards]"
+                      lineageId="Package\prepare_data\appearances_csv.Outputs[Flat File Source Output].Columns[red_cards]"
                       name="red_cards"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -327,12 +438,12 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Upload f_player_statistic\appearances_csv.Outputs[Flat File Source Output].Columns[goals]"
+                      refId="Package\prepare_data\appearances_csv.Outputs[Flat File Source Output].Columns[goals]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Upload f_player_statistic\appearances_csv.Outputs[Flat File Source Output].ExternalColumns[goals]"
-                      lineageId="Package\Upload f_player_statistic\appearances_csv.Outputs[Flat File Source Output].Columns[goals]"
+                      externalMetadataColumnId="Package\prepare_data\appearances_csv.Outputs[Flat File Source Output].ExternalColumns[goals]"
+                      lineageId="Package\prepare_data\appearances_csv.Outputs[Flat File Source Output].Columns[goals]"
                       name="goals"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -347,12 +458,12 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Upload f_player_statistic\appearances_csv.Outputs[Flat File Source Output].Columns[assists]"
-                      dataType="i1"
+                      refId="Package\prepare_data\appearances_csv.Outputs[Flat File Source Output].Columns[assists]"
+                      dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Upload f_player_statistic\appearances_csv.Outputs[Flat File Source Output].ExternalColumns[assists]"
-                      lineageId="Package\Upload f_player_statistic\appearances_csv.Outputs[Flat File Source Output].Columns[assists]"
+                      externalMetadataColumnId="Package\prepare_data\appearances_csv.Outputs[Flat File Source Output].ExternalColumns[assists]"
+                      lineageId="Package\prepare_data\appearances_csv.Outputs[Flat File Source Output].Columns[assists]"
                       name="assists"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -367,12 +478,12 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Upload f_player_statistic\appearances_csv.Outputs[Flat File Source Output].Columns[minutes_played]"
+                      refId="Package\prepare_data\appearances_csv.Outputs[Flat File Source Output].Columns[minutes_played]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Upload f_player_statistic\appearances_csv.Outputs[Flat File Source Output].ExternalColumns[minutes_played]"
-                      lineageId="Package\Upload f_player_statistic\appearances_csv.Outputs[Flat File Source Output].Columns[minutes_played]"
+                      externalMetadataColumnId="Package\prepare_data\appearances_csv.Outputs[Flat File Source Output].ExternalColumns[minutes_played]"
+                      lineageId="Package\prepare_data\appearances_csv.Outputs[Flat File Source Output].Columns[minutes_played]"
                       name="minutes_played"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -390,90 +501,84 @@
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Upload f_player_statistic\appearances_csv.Outputs[Flat File Source Output].ExternalColumns[appearance_id]"
-                      codePage="65001"
-                      dataType="str"
-                      length="50"
+                      refId="Package\prepare_data\appearances_csv.Outputs[Flat File Source Output].ExternalColumns[appearance_id]"
+                      dataType="wstr"
+                      length="20"
                       name="appearance_id" />
                     <externalMetadataColumn
-                      refId="Package\Upload f_player_statistic\appearances_csv.Outputs[Flat File Source Output].ExternalColumns[game_id]"
+                      refId="Package\prepare_data\appearances_csv.Outputs[Flat File Source Output].ExternalColumns[game_id]"
                       dataType="i4"
                       name="game_id" />
                     <externalMetadataColumn
-                      refId="Package\Upload f_player_statistic\appearances_csv.Outputs[Flat File Source Output].ExternalColumns[player_id]"
+                      refId="Package\prepare_data\appearances_csv.Outputs[Flat File Source Output].ExternalColumns[player_id]"
                       dataType="i4"
                       name="player_id" />
                     <externalMetadataColumn
-                      refId="Package\Upload f_player_statistic\appearances_csv.Outputs[Flat File Source Output].ExternalColumns[player_club_id]"
+                      refId="Package\prepare_data\appearances_csv.Outputs[Flat File Source Output].ExternalColumns[player_club_id]"
                       dataType="i4"
                       name="player_club_id" />
                     <externalMetadataColumn
-                      refId="Package\Upload f_player_statistic\appearances_csv.Outputs[Flat File Source Output].ExternalColumns[player_current_club_id]"
-                      codePage="65001"
-                      dataType="str"
-                      length="50"
+                      refId="Package\prepare_data\appearances_csv.Outputs[Flat File Source Output].ExternalColumns[player_current_club_id]"
+                      dataType="i4"
                       name="player_current_club_id" />
                     <externalMetadataColumn
-                      refId="Package\Upload f_player_statistic\appearances_csv.Outputs[Flat File Source Output].ExternalColumns[date]"
-                      codePage="65001"
-                      dataType="str"
-                      length="50"
+                      refId="Package\prepare_data\appearances_csv.Outputs[Flat File Source Output].ExternalColumns[date]"
+                      dataType="date"
                       name="date" />
                     <externalMetadataColumn
-                      refId="Package\Upload f_player_statistic\appearances_csv.Outputs[Flat File Source Output].ExternalColumns[player_name]"
-                      codePage="65001"
-                      dataType="str"
+                      refId="Package\prepare_data\appearances_csv.Outputs[Flat File Source Output].ExternalColumns[player_name]"
+                      dataType="wstr"
                       length="50"
                       name="player_name" />
                     <externalMetadataColumn
-                      refId="Package\Upload f_player_statistic\appearances_csv.Outputs[Flat File Source Output].ExternalColumns[competition_id]"
+                      refId="Package\prepare_data\appearances_csv.Outputs[Flat File Source Output].ExternalColumns[competition_id]"
                       dataType="wstr"
-                      length="50"
+                      length="10"
                       name="competition_id" />
                     <externalMetadataColumn
-                      refId="Package\Upload f_player_statistic\appearances_csv.Outputs[Flat File Source Output].ExternalColumns[yellow_cards]"
+                      refId="Package\prepare_data\appearances_csv.Outputs[Flat File Source Output].ExternalColumns[yellow_cards]"
                       dataType="i4"
                       name="yellow_cards" />
                     <externalMetadataColumn
-                      refId="Package\Upload f_player_statistic\appearances_csv.Outputs[Flat File Source Output].ExternalColumns[red_cards]"
+                      refId="Package\prepare_data\appearances_csv.Outputs[Flat File Source Output].ExternalColumns[red_cards]"
                       dataType="i4"
                       name="red_cards" />
                     <externalMetadataColumn
-                      refId="Package\Upload f_player_statistic\appearances_csv.Outputs[Flat File Source Output].ExternalColumns[goals]"
+                      refId="Package\prepare_data\appearances_csv.Outputs[Flat File Source Output].ExternalColumns[goals]"
                       dataType="i4"
                       name="goals" />
                     <externalMetadataColumn
-                      refId="Package\Upload f_player_statistic\appearances_csv.Outputs[Flat File Source Output].ExternalColumns[assists]"
-                      dataType="i1"
+                      refId="Package\prepare_data\appearances_csv.Outputs[Flat File Source Output].ExternalColumns[assists]"
+                      dataType="i4"
                       name="assists" />
                     <externalMetadataColumn
-                      refId="Package\Upload f_player_statistic\appearances_csv.Outputs[Flat File Source Output].ExternalColumns[minutes_played]"
+                      refId="Package\prepare_data\appearances_csv.Outputs[Flat File Source Output].ExternalColumns[minutes_played]"
                       dataType="i4"
                       name="minutes_played" />
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\Upload f_player_statistic\appearances_csv.Outputs[Flat File Source Error Output]"
+                  refId="Package\prepare_data\appearances_csv.Outputs[Flat File Source Error Output]"
                   isErrorOut="true"
                   name="Flat File Source Error Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Upload f_player_statistic\appearances_csv.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      refId="Package\prepare_data\appearances_csv.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
                       codePage="65001"
                       dataType="text"
                       description="Flat File Source Error Output Column"
-                      lineageId="Package\Upload f_player_statistic\appearances_csv.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      lineageId="Package\prepare_data\appearances_csv.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
                       name="Flat File Source Error Output Column" />
                     <outputColumn
-                      refId="Package\Upload f_player_statistic\appearances_csv.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      refId="Package\prepare_data\appearances_csv.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Upload f_player_statistic\appearances_csv.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      lineageId="Package\prepare_data\appearances_csv.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Upload f_player_statistic\appearances_csv.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      refId="Package\prepare_data\appearances_csv.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Upload f_player_statistic\appearances_csv.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\prepare_data\appearances_csv.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -482,11 +587,11 @@
               </outputs>
             </component>
             <component
-              refId="Package\Upload f_player_statistic\f_player_statistic"
+              refId="Package\prepare_data\OLE DB Destination"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
               description="OLE DB Destination"
-              name="f_player_statistic"
+              name="OLE DB Destination"
               usesDispositions="true"
               version="4">
               <properties>
@@ -497,7 +602,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[f_player_statistic]</property>
+                  name="OpenRowset">[dbo].[appearance]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -523,7 +628,7 @@
                 <property
                   dataType="System.Boolean"
                   description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepIdentity">false</property>
+                  name="FastLoadKeepIdentity">true</property>
                 <property
                   dataType="System.Boolean"
                   description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
@@ -539,7 +644,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Upload f_player_statistic\f_player_statistic.Connections[OleDbConnection]"
+                  refId="Package\prepare_data\OLE DB Destination.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[hurtownia_s26462]"
                   connectionManagerRefId="Package.ConnectionManagers[hurtownia_s26462]"
                   description="The OLE DB runtime connection used to access the database."
@@ -547,92 +652,149 @@
               </connections>
               <inputs>
                 <input
-                  refId="Package\Upload f_player_statistic\f_player_statistic.Inputs[OLE DB Destination Input]"
+                  refId="Package\prepare_data\OLE DB Destination.Inputs[OLE DB Destination Input]"
                   errorOrTruncationOperation="Insert"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Upload f_player_statistic\f_player_statistic.Inputs[OLE DB Destination Input].Columns[yellow_cards]"
+                      refId="Package\prepare_data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[appearance_id]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="appearance_id"
+                      externalMetadataColumnId="Package\prepare_data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[appearance_id]"
+                      lineageId="Package\prepare_data\appearances_csv.Outputs[Flat File Source Output].Columns[appearance_id]" />
+                    <inputColumn
+                      refId="Package\prepare_data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[game_id]"
+                      cachedDataType="i4"
+                      cachedName="game_id"
+                      externalMetadataColumnId="Package\prepare_data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[game_id]"
+                      lineageId="Package\prepare_data\appearances_csv.Outputs[Flat File Source Output].Columns[game_id]" />
+                    <inputColumn
+                      refId="Package\prepare_data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[player_id]"
+                      cachedDataType="i4"
+                      cachedName="player_id"
+                      externalMetadataColumnId="Package\prepare_data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[player_id]"
+                      lineageId="Package\prepare_data\appearances_csv.Outputs[Flat File Source Output].Columns[player_id]" />
+                    <inputColumn
+                      refId="Package\prepare_data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[player_club_id]"
+                      cachedDataType="i4"
+                      cachedName="player_club_id"
+                      externalMetadataColumnId="Package\prepare_data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[player_club_id]"
+                      lineageId="Package\prepare_data\appearances_csv.Outputs[Flat File Source Output].Columns[player_club_id]" />
+                    <inputColumn
+                      refId="Package\prepare_data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[player_current_club_id]"
+                      cachedDataType="i4"
+                      cachedName="player_current_club_id"
+                      externalMetadataColumnId="Package\prepare_data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[player_current_club_id]"
+                      lineageId="Package\prepare_data\appearances_csv.Outputs[Flat File Source Output].Columns[player_current_club_id]" />
+                    <inputColumn
+                      refId="Package\prepare_data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[date]"
+                      cachedDataType="date"
+                      cachedName="date"
+                      externalMetadataColumnId="Package\prepare_data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[date]"
+                      lineageId="Package\prepare_data\appearances_csv.Outputs[Flat File Source Output].Columns[date]" />
+                    <inputColumn
+                      refId="Package\prepare_data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[player_name]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="player_name"
+                      externalMetadataColumnId="Package\prepare_data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[player_name]"
+                      lineageId="Package\prepare_data\appearances_csv.Outputs[Flat File Source Output].Columns[player_name]" />
+                    <inputColumn
+                      refId="Package\prepare_data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[competition_id]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="competition_id"
+                      externalMetadataColumnId="Package\prepare_data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[competition_id]"
+                      lineageId="Package\prepare_data\appearances_csv.Outputs[Flat File Source Output].Columns[competition_id]" />
+                    <inputColumn
+                      refId="Package\prepare_data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[yellow_cards]"
                       cachedDataType="i4"
                       cachedName="yellow_cards"
-                      externalMetadataColumnId="Package\Upload f_player_statistic\f_player_statistic.Inputs[OLE DB Destination Input].ExternalColumns[yellow_cards]"
-                      lineageId="Package\Upload f_player_statistic\appearances_csv.Outputs[Flat File Source Output].Columns[yellow_cards]" />
+                      externalMetadataColumnId="Package\prepare_data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[yellow_cards]"
+                      lineageId="Package\prepare_data\appearances_csv.Outputs[Flat File Source Output].Columns[yellow_cards]" />
                     <inputColumn
-                      refId="Package\Upload f_player_statistic\f_player_statistic.Inputs[OLE DB Destination Input].Columns[red_cards]"
+                      refId="Package\prepare_data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[red_cards]"
                       cachedDataType="i4"
                       cachedName="red_cards"
-                      externalMetadataColumnId="Package\Upload f_player_statistic\f_player_statistic.Inputs[OLE DB Destination Input].ExternalColumns[red_cards]"
-                      lineageId="Package\Upload f_player_statistic\appearances_csv.Outputs[Flat File Source Output].Columns[red_cards]" />
+                      externalMetadataColumnId="Package\prepare_data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[red_cards]"
+                      lineageId="Package\prepare_data\appearances_csv.Outputs[Flat File Source Output].Columns[red_cards]" />
                     <inputColumn
-                      refId="Package\Upload f_player_statistic\f_player_statistic.Inputs[OLE DB Destination Input].Columns[goals]"
+                      refId="Package\prepare_data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[goals]"
                       cachedDataType="i4"
                       cachedName="goals"
-                      externalMetadataColumnId="Package\Upload f_player_statistic\f_player_statistic.Inputs[OLE DB Destination Input].ExternalColumns[goals]"
-                      lineageId="Package\Upload f_player_statistic\appearances_csv.Outputs[Flat File Source Output].Columns[goals]" />
+                      externalMetadataColumnId="Package\prepare_data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[goals]"
+                      lineageId="Package\prepare_data\appearances_csv.Outputs[Flat File Source Output].Columns[goals]" />
                     <inputColumn
-                      refId="Package\Upload f_player_statistic\f_player_statistic.Inputs[OLE DB Destination Input].Columns[assists]"
-                      cachedDataType="i1"
+                      refId="Package\prepare_data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[assists]"
+                      cachedDataType="i4"
                       cachedName="assists"
-                      externalMetadataColumnId="Package\Upload f_player_statistic\f_player_statistic.Inputs[OLE DB Destination Input].ExternalColumns[assists]"
-                      lineageId="Package\Upload f_player_statistic\appearances_csv.Outputs[Flat File Source Output].Columns[assists]" />
+                      externalMetadataColumnId="Package\prepare_data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[assists]"
+                      lineageId="Package\prepare_data\appearances_csv.Outputs[Flat File Source Output].Columns[assists]" />
                     <inputColumn
-                      refId="Package\Upload f_player_statistic\f_player_statistic.Inputs[OLE DB Destination Input].Columns[minutes_played]"
+                      refId="Package\prepare_data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[minutes_played]"
                       cachedDataType="i4"
                       cachedName="minutes_played"
-                      externalMetadataColumnId="Package\Upload f_player_statistic\f_player_statistic.Inputs[OLE DB Destination Input].ExternalColumns[minutes_played]"
-                      lineageId="Package\Upload f_player_statistic\appearances_csv.Outputs[Flat File Source Output].Columns[minutes_played]" />
+                      externalMetadataColumnId="Package\prepare_data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[minutes_played]"
+                      lineageId="Package\prepare_data\appearances_csv.Outputs[Flat File Source Output].Columns[minutes_played]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Upload f_player_statistic\f_player_statistic.Inputs[OLE DB Destination Input].ExternalColumns[id_player]"
-                      dataType="i4"
-                      name="id_player" />
+                      refId="Package\prepare_data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[appearance_id]"
+                      dataType="wstr"
+                      length="20"
+                      name="appearance_id" />
                     <externalMetadataColumn
-                      refId="Package\Upload f_player_statistic\f_player_statistic.Inputs[OLE DB Destination Input].ExternalColumns[id_game]"
+                      refId="Package\prepare_data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[game_id]"
                       dataType="i4"
-                      name="id_game" />
+                      name="game_id" />
                     <externalMetadataColumn
-                      refId="Package\Upload f_player_statistic\f_player_statistic.Inputs[OLE DB Destination Input].ExternalColumns[id_competition]"
+                      refId="Package\prepare_data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[player_id]"
+                      dataType="i4"
+                      name="player_id" />
+                    <externalMetadataColumn
+                      refId="Package\prepare_data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[player_club_id]"
+                      dataType="i4"
+                      name="player_club_id" />
+                    <externalMetadataColumn
+                      refId="Package\prepare_data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[player_current_club_id]"
+                      dataType="i4"
+                      name="player_current_club_id" />
+                    <externalMetadataColumn
+                      refId="Package\prepare_data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[date]"
+                      dataType="dbDate"
+                      name="date" />
+                    <externalMetadataColumn
+                      refId="Package\prepare_data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[player_name]"
+                      dataType="wstr"
+                      length="255"
+                      name="player_name" />
+                    <externalMetadataColumn
+                      refId="Package\prepare_data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[competition_id]"
                       dataType="wstr"
                       length="10"
-                      name="id_competition" />
+                      name="competition_id" />
                     <externalMetadataColumn
-                      refId="Package\Upload f_player_statistic\f_player_statistic.Inputs[OLE DB Destination Input].ExternalColumns[id_club]"
-                      dataType="i4"
-                      name="id_club" />
-                    <externalMetadataColumn
-                      refId="Package\Upload f_player_statistic\f_player_statistic.Inputs[OLE DB Destination Input].ExternalColumns[id_k_game_events]"
-                      dataType="i4"
-                      name="id_k_game_events" />
-                    <externalMetadataColumn
-                      refId="Package\Upload f_player_statistic\f_player_statistic.Inputs[OLE DB Destination Input].ExternalColumns[id_k_player_valuations]"
-                      dataType="i4"
-                      name="id_k_player_valuations" />
-                    <externalMetadataColumn
-                      refId="Package\Upload f_player_statistic\f_player_statistic.Inputs[OLE DB Destination Input].ExternalColumns[is_starter]"
-                      dataType="bool"
-                      name="is_starter" />
-                    <externalMetadataColumn
-                      refId="Package\Upload f_player_statistic\f_player_statistic.Inputs[OLE DB Destination Input].ExternalColumns[goals]"
-                      dataType="i4"
-                      name="goals" />
-                    <externalMetadataColumn
-                      refId="Package\Upload f_player_statistic\f_player_statistic.Inputs[OLE DB Destination Input].ExternalColumns[assists]"
-                      dataType="i4"
-                      name="assists" />
-                    <externalMetadataColumn
-                      refId="Package\Upload f_player_statistic\f_player_statistic.Inputs[OLE DB Destination Input].ExternalColumns[yellow_cards]"
+                      refId="Package\prepare_data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[yellow_cards]"
                       dataType="i4"
                       name="yellow_cards" />
                     <externalMetadataColumn
-                      refId="Package\Upload f_player_statistic\f_player_statistic.Inputs[OLE DB Destination Input].ExternalColumns[red_cards]"
+                      refId="Package\prepare_data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[red_cards]"
                       dataType="i4"
                       name="red_cards" />
                     <externalMetadataColumn
-                      refId="Package\Upload f_player_statistic\f_player_statistic.Inputs[OLE DB Destination Input].ExternalColumns[minutes_played]"
+                      refId="Package\prepare_data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[goals]"
+                      dataType="i4"
+                      name="goals" />
+                    <externalMetadataColumn
+                      refId="Package\prepare_data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[assists]"
+                      dataType="i4"
+                      name="assists" />
+                    <externalMetadataColumn
+                      refId="Package\prepare_data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[minutes_played]"
                       dataType="i4"
                       name="minutes_played" />
                   </externalMetadataColumns>
@@ -640,22 +802,22 @@
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Upload f_player_statistic\f_player_statistic.Outputs[OLE DB Destination Error Output]"
+                  refId="Package\prepare_data\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\Upload f_player_statistic\f_player_statistic.Inputs[OLE DB Destination Input]">
+                  synchronousInputId="Package\prepare_data\OLE DB Destination.Inputs[OLE DB Destination Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Upload f_player_statistic\f_player_statistic.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      refId="Package\prepare_data\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Upload f_player_statistic\f_player_statistic.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      lineageId="Package\prepare_data\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Upload f_player_statistic\f_player_statistic.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      refId="Package\prepare_data\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Upload f_player_statistic\f_player_statistic.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\prepare_data\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -666,10 +828,10 @@
           </components>
           <paths>
             <path
-              refId="Package\Upload f_player_statistic.Paths[Flat File Source Output]"
-              endId="Package\Upload f_player_statistic\f_player_statistic.Inputs[OLE DB Destination Input]"
+              refId="Package\prepare_data.Paths[Flat File Source Output]"
+              endId="Package\prepare_data\OLE DB Destination.Inputs[OLE DB Destination Input]"
               name="Flat File Source Output"
-              startId="Package\Upload f_player_statistic\appearances_csv.Outputs[Flat File Source Output]" />
+              startId="Package\prepare_data\appearances_csv.Outputs[Flat File Source Output]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -688,39 +850,55 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
-          Size="199,42"
-          Id="Package\Upload f_player_statistic"
-          TopLeft="5.5,5.5" />
+          Size="144,42"
+          Id="Package\prepare_data"
+          TopLeft="51,38" />
+        <NodeLayout
+          Size="215,42"
+          Id="Package\Load table f_player_statistic"
+          TopLeft="51,295" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
   <TaskHost
-    design-time-name="Package\Upload f_player_statistic">
+    design-time-name="Package\prepare_data">
     <LayoutInfo>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="165,42"
-          Id="Package\Upload f_player_statistic\appearances_csv"
-          TopLeft="96.5,23.5" />
+          Id="Package\prepare_data\appearances_csv"
+          TopLeft="88,40" />
         <NodeLayout
-          Size="161,42"
-          Id="Package\Upload f_player_statistic\f_player_statistic"
-          TopLeft="97,131" />
+          Size="177,42"
+          Id="Package\prepare_data\OLE DB Destination"
+          TopLeft="109,138" />
         <EdgeLayout
-          Id="Package\Upload f_player_statistic.Paths[Flat File Source Output]"
-          TopLeft="178.25,65.5">
+          Id="Package\prepare_data.Paths[Flat File Source Output]"
+          TopLeft="170.5,82">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,65.5"
+              EndConnector="27,56"
               Start="0,0"
-              End="0,58">
+              End="27,48.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,58" />
+                    End="0,24" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,24"
+                    Point2="0,28"
+                    Point3="4,28" />
+                  <mssgle:LineSegment
+                    End="23,28" />
+                  <mssgle:CubicBezierSegment
+                    Point1="23,28"
+                    Point2="27,28"
+                    Point3="27,32" />
+                  <mssgle:LineSegment
+                    End="27,48.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -733,7 +911,7 @@
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Upload f_player_statistic\f_player_statistic">
+    design-time-name="Package\prepare_data\OLE DB Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

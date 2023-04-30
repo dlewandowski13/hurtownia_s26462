@@ -11,11 +11,138 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="92"
-  DTS:VersionGUID="{CB06FFBB-5793-4708-8839-FB4F1292DE93}">
+  DTS:VersionBuild="102"
+  DTS:VersionGUID="{3AC8C19A-6918-4D77-9865-9FC37EEC43E4}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[appearances_csv]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{CD8E3701-06C4-4079-981E-703C38AE3606}"
+      DTS:ObjectName="appearances_csv">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1045"
+          DTS:HeaderRowDelimiter="_x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x0022_"
+          DTS:CodePage="65001"
+          DTS:ConnectionString="C:\Users\dawid\Documents\studia\IDH\baza_danych\appearances.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="appearance_id"
+              DTS:DTSID="{C0AF9C1A-9212-48B7-950F-6A8249CB2B06}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="game_id"
+              DTS:DTSID="{DFA314FA-4A3A-49C9-9493-E49135DC50F5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="player_id"
+              DTS:DTSID="{E163DBF6-AB9B-4FC5-A4E4-EFB68FC0C475}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="player_club_id"
+              DTS:DTSID="{708ACF3F-A8F6-4F15-8C4B-F0C6BE2D0EE7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="player_current_club_id"
+              DTS:DTSID="{4C06B456-902B-4287-BA9D-E9280D112738}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="7"
+              DTS:TextQualified="True"
+              DTS:ObjectName="date"
+              DTS:DTSID="{2C3EE290-9B9A-4FF2-9B0F-300D75D7664A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="player_name"
+              DTS:DTSID="{8346E6DF-7B9F-4A8A-AAE1-C01A0AD4873D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="10"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="competition_id"
+              DTS:DTSID="{0918AB09-25D2-4F03-ACB3-7640A34F0710}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="yellow_cards"
+              DTS:DTSID="{B9CF34AA-241E-494C-9B1E-8F7BDE9373CB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="red_cards"
+              DTS:DTSID="{9F9DCF03-908C-4667-839C-77DEA395211D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="goals"
+              DTS:DTSID="{A149FDF9-A576-4C9A-A63C-F30B9DFA8E6B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="assists"
+              DTS:DTSID="{3C91B173-57AE-455D-BF8A-993DFF82F6E0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000A_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="minutes_played"
+              DTS:DTSID="{41658381-B706-4508-858A-1A113A80F5B7}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[clubs_csv]"
       DTS:CreationName="FLATFILE"
@@ -527,7 +654,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="game_id"
-              DTS:DTSID="{017B910F-D198-4943-A7C8-CE5BFE8775CD}"
+              DTS:DTSID="{0871CBFA-1DBD-4FCB-900D-5E184DD5936E}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -535,7 +662,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="minute"
-              DTS:DTSID="{527FD095-D7C9-4B77-B576-3474B09AD1CB}"
+              DTS:DTSID="{1364F8DC-C7DA-4F47-9216-96BBBFA41CA6}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -544,7 +671,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="type"
-              DTS:DTSID="{020478C5-CBD6-42E9-99E6-C4DF81AEC9CC}"
+              DTS:DTSID="{549431D7-F11A-4BBB-AB51-96CA89D1983F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -553,16 +680,15 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="club_id"
-              DTS:DTSID="{D11DB88B-B2E5-4BCE-8FBC-BEB2F1AC3BA0}"
+              DTS:DTSID="{2BB7DBF8-51E3-4D3C-831E-431BA617B92D}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
+              DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="player_id"
-              DTS:DTSID="{32E01943-A113-443E-9E41-E6F5913F581E}"
+              DTS:DTSID="{DCFB9241-6E4C-4551-95EA-FD03D5AEFCF0}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -571,16 +697,15 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="description"
-              DTS:DTSID="{E58478C7-9358-48F5-B17F-F359F043F486}"
+              DTS:DTSID="{CB1014F4-164A-4595-8008-080F7DF3A11C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x000A_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
+              DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="player_in_id"
-              DTS:DTSID="{BC92703C-1D80-463A-9132-676A43358AA5}"
+              DTS:DTSID="{6D7B691D-D17E-49CC-ADEA-63EDEFF8B16C}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -2690,13 +2815,21 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                       cachedName="game_id"
                       externalMetadataColumnId="Package\Upload game events\d_k_game_events.Inputs[OLE DB Destination Input].ExternalColumns[id_game]"
                       lineageId="Package\Upload game events\Flat File Source.Outputs[Flat File Source Output].Columns[game_id]" />
+                    <inputColumn
+                      refId="Package\Upload game events\d_k_game_events.Inputs[OLE DB Destination Input].Columns[player_id]"
+                      cachedDataType="i4"
+                      cachedName="player_id"
+                      externalMetadataColumnId="Package\Upload game events\d_k_game_events.Inputs[OLE DB Destination Input].ExternalColumns[id_player]"
+                      lineageId="Package\Upload game events\Flat File Source.Outputs[Flat File Source Output].Columns[player_id]" />
+                    <inputColumn
+                      refId="Package\Upload game events\d_k_game_events.Inputs[OLE DB Destination Input].Columns[player_in_id]"
+                      cachedDataType="i4"
+                      cachedName="player_in_id"
+                      externalMetadataColumnId="Package\Upload game events\d_k_game_events.Inputs[OLE DB Destination Input].ExternalColumns[id_player_in]"
+                      lineageId="Package\Upload game events\Flat File Source.Outputs[Flat File Source Output].Columns[player_in_id]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Upload game events\d_k_game_events.Inputs[OLE DB Destination Input].ExternalColumns[Id]"
-                      dataType="i4"
-                      name="Id" />
                     <externalMetadataColumn
                       refId="Package\Upload game events\d_k_game_events.Inputs[OLE DB Destination Input].ExternalColumns[event_type]"
                       dataType="wstr"
@@ -2710,6 +2843,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                       refId="Package\Upload game events\d_k_game_events.Inputs[OLE DB Destination Input].ExternalColumns[id_game]"
                       dataType="i4"
                       name="id_game" />
+                    <externalMetadataColumn
+                      refId="Package\Upload game events\d_k_game_events.Inputs[OLE DB Destination Input].ExternalColumns[id_player]"
+                      dataType="i4"
+                      name="id_player" />
+                    <externalMetadataColumn
+                      refId="Package\Upload game events\d_k_game_events.Inputs[OLE DB Destination Input].ExternalColumns[id_player_in]"
+                      dataType="i4"
+                      name="id_player_in" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -2830,6 +2971,46 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                           name="UseBinaryFormat">false</property>
                       </properties>
                     </outputColumn>
+                    <outputColumn
+                      refId="Package\Upload game events\Flat File Source.Outputs[Flat File Source Output].Columns[player_id]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Upload game events\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[player_id]"
+                      lineageId="Package\Upload game events\Flat File Source.Outputs[Flat File Source Output].Columns[player_id]"
+                      name="player_id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Upload game events\Flat File Source.Outputs[Flat File Source Output].Columns[player_in_id]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Upload game events\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[player_in_id]"
+                      lineageId="Package\Upload game events\Flat File Source.Outputs[Flat File Source Output].Columns[player_in_id]"
+                      name="player_in_id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -2854,9 +3035,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                       name="club_id" />
                     <externalMetadataColumn
                       refId="Package\Upload game events\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[player_id]"
-                      codePage="65001"
-                      dataType="str"
-                      length="50"
+                      dataType="i4"
                       name="player_id" />
                     <externalMetadataColumn
                       refId="Package\Upload game events\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[description]"
@@ -2866,9 +3045,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                       name="description" />
                     <externalMetadataColumn
                       refId="Package\Upload game events\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[player_in_id]"
-                      codePage="65001"
-                      dataType="str"
-                      length="50"
+                      dataType="i4"
                       name="player_in_id" />
                   </externalMetadataColumns>
                 </output>
@@ -4307,24 +4484,24 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
       DTS:CreationName=""
-      DTS:DTSID="{6D673BD8-FE48-452A-96B0-669C47F51148}"
+      DTS:DTSID="{67FA7789-1796-4A75-8671-168AB473DC06}"
       DTS:From="Package\Upload games"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 2"
-      DTS:To="Package\Upload game events" />
+      DTS:To="Package\Upload players" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 3]"
       DTS:CreationName=""
-      DTS:DTSID="{662D20CD-BE80-43FA-9CC7-54D53EC6D7E7}"
-      DTS:From="Package\Upload game events"
+      DTS:DTSID="{6CF8A006-F960-40F0-8736-2B348C9E7232}"
+      DTS:From="Package\Upload players"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 3"
-      DTS:To="Package\Upload players" />
+      DTS:To="Package\Upload game events" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 4]"
       DTS:CreationName=""
-      DTS:DTSID="{4B1275AF-4971-482C-8D06-C79AED2EBDDA}"
-      DTS:From="Package\Upload players"
+      DTS:DTSID="{5CC7350F-EE95-488E-859A-BD2D65A8397C}"
+      DTS:From="Package\Upload game events"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 4"
       DTS:To="Package\upload player valuations" />
@@ -4352,11 +4529,19 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
         <NodeLayout
           Size="180,42"
           Id="Package\Upload game events"
-          TopLeft="596,164" />
+          TopLeft="809,235" />
         <NodeLayout
           Size="150,42"
           Id="Package\Upload games"
           TopLeft="406,119" />
+        <NodeLayout
+          Size="198,42"
+          Id="Package\upload player valuations"
+          TopLeft="1013,289" />
+        <NodeLayout
+          Size="152,42"
+          Id="Package\Upload players"
+          TopLeft="612,178" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
           TopLeft="207.5,65.5">
@@ -4431,26 +4616,26 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="40,45"
+              EndConnector="56,59"
               Start="0,0"
-              End="32.5,45">
+              End="48.5,59">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="16,0" />
+                    End="24,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="16,0"
-                    Point2="20,0"
-                    Point3="20,4" />
+                    Point1="24,0"
+                    Point2="28,0"
+                    Point3="28,4" />
                   <mssgle:LineSegment
-                    End="20,41" />
+                    End="28,55" />
                   <mssgle:CubicBezierSegment
-                    Point1="20,41"
-                    Point2="20,45"
-                    Point3="24,45" />
+                    Point1="28,55"
+                    Point2="28,59"
+                    Point3="32,59" />
                   <mssgle:LineSegment
-                    End="32.5,45" />
+                    End="48.5,59" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4459,19 +4644,49 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="152,42"
-          Id="Package\Upload players"
-          TopLeft="800,222" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 3]"
-          TopLeft="776,185">
+          TopLeft="764,199">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="24,58"
+              EndConnector="45,57"
               Start="0,0"
-              End="16.5,58">
+              End="37.5,57">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="18.5,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="18.5,0"
+                    Point2="22.5,0"
+                    Point3="22.5,4" />
+                  <mssgle:LineSegment
+                    End="22.5,53" />
+                  <mssgle:CubicBezierSegment
+                    Point1="22.5,53"
+                    Point2="22.5,57"
+                    Point3="26.5,57" />
+                  <mssgle:LineSegment
+                    End="37.5,57" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 4]"
+          TopLeft="989,256">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="24,54"
+              Start="0,0"
+              End="16.5,54">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -4482,51 +4697,13 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                     Point2="12,0"
                     Point3="12,4" />
                   <mssgle:LineSegment
-                    End="12,54" />
+                    End="12,50" />
                   <mssgle:CubicBezierSegment
-                    Point1="12,54"
-                    Point2="12,58"
-                    Point3="16,58" />
+                    Point1="12,50"
+                    Point2="12,54"
+                    Point3="16,54" />
                   <mssgle:LineSegment
-                    End="16.5,58" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="198,42"
-          Id="Package\upload player valuations"
-          TopLeft="993,276" />
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 4]"
-          TopLeft="952,243">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="41,54"
-              Start="0,0"
-              End="33.5,54">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="16.5,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="16.5,0"
-                    Point2="20.5,0"
-                    Point3="20.5,4" />
-                  <mssgle:LineSegment
-                    End="20.5,50" />
-                  <mssgle:CubicBezierSegment
-                    Point1="20.5,50"
-                    Point2="20.5,54"
-                    Point3="24.5,54" />
-                  <mssgle:LineSegment
-                    End="33.5,54" />
+                    End="16.5,54" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4542,7 +4719,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
     design-time-name="Package\Upload clubs">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="127,42"
           Id="Package\Upload clubs\clubs_csv"
@@ -4570,7 +4747,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -4721,7 +4900,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
     design-time-name="Package\Upload games">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="135,42"
           Id="Package\Upload games\games_csv"
@@ -4749,7 +4928,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -4757,57 +4938,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
   </TaskHost>
   <PipelineComponentMetadata
     design-time-name="Package\Upload games\d_games">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\Upload players">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="137,42"
-          Id="Package\Upload players\players_csv"
-          TopLeft="95.5,95.5" />
-        <NodeLayout
-          Size="127,42"
-          Id="Package\Upload players\d_players"
-          TopLeft="102,224" />
-        <EdgeLayout
-          Id="Package\Upload players.Paths[Flat File Source Output]"
-          TopLeft="164.75,137.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,86.5"
-              Start="0,0"
-              End="0,79">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,79" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Upload players\d_players">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -4859,6 +4989,57 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
   </TaskHost>
   <PipelineComponentMetadata
     design-time-name="Package\upload player valuations\d_k_player_valuations">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Upload players">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="137,42"
+          Id="Package\Upload players\players_csv"
+          TopLeft="95.5,95.5" />
+        <NodeLayout
+          Size="127,42"
+          Id="Package\Upload players\d_players"
+          TopLeft="102,224" />
+        <EdgeLayout
+          Id="Package\Upload players.Paths[Flat File Source Output]"
+          TopLeft="164.75,137.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,86.5"
+              Start="0,0"
+              End="0,79">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,79" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Upload players\d_players">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
