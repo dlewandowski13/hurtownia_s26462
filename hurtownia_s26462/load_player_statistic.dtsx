@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="53"
-  DTS:VersionGUID="{809A7041-2BAC-46AD-BEDD-AD1825982B02}">
+  DTS:VersionBuild="57"
+  DTS:VersionGUID="{851B101E-26B7-4AA7-9EC8-77497EE690B2}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -168,28 +168,6 @@
   </DTS:ConnectionManagers>
   <DTS:Variables />
   <DTS:Executables>
-    <DTS:Executable
-      DTS:refId="Package\Load table f_player_statistic"
-      DTS:CreationName="Microsoft.DbMaintenanceTSQLExecuteTask"
-      DTS:Description="Execute T-SQL Statement Task"
-      DTS:DTSID="{915f980a-3d85-4ae4-a9c3-51e75b36a1fc}"
-      DTS:ExecutableType="Microsoft.DbMaintenanceTSQLExecuteTask"
-      DTS:LocaleID="-1"
-      DTS:ObjectName="Load table f_player_statistic"
-      DTS:TaskContact="Execute T-SQL Statement Task; Microsoft Corporation; Microsoft SQL Server v9; © 2004 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
-      <DTS:Variables />
-      <DTS:ObjectData>
-        <SQLTask:SqlTaskData
-          SQLTask:Connection="{A03DBFE5-ACCC-4917-B36B-192FBE8DF1E7}"
-          SQLTask:SqlStatementSource="  INSERT INTO dbo.f_player_statistic (&#xA;    id,&#xA;    id_player,&#xA;    id_game,&#xA;    id_competition,&#xA;    id_club,&#xA;    id_k_game_event,&#xA;    date,&#xA;&#x9;player_name,&#xA;    is_started,&#xA;    goals,&#xA;    assists,&#xA;    yellow_cards,&#xA;    red_cards,&#xA;    minutes_played,&#xA;    player_value&#xA;)&#xA;SELECT&#xA;    app.appearance_id&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;AS appearance_id,&#xA;    p.id&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;AS id_player,&#xA;    g.id&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;AS id_game,&#xA;    com.id&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;AS id_competition,&#xA;    c.id&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;AS id_club,&#xA;    ge.id&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;AS id_k_game_event,&#xA;    app.&quot;date&quot;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;AS &quot;date&quot;,&#xA;&#x9;app.player_name&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;AS player_name,&#xA;    CASE &#xA;&#x9;&#x9;WHEN ge.id_player_in IS NOT NULL &#xA;&#x9;&#x9;THEN 0 &#xA;&#x9;&#x9;ELSE 1 &#xA;&#x9;END&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;AS is_started,&#xA;    app.goals&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;AS goals,&#xA;    app.assists&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;AS assists,&#xA;    app.yellow_cards&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;AS yellow_cards,&#xA;    app.red_cards&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;AS red_cards,&#xA;    app.minutes_played&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;AS minutes_played,&#xA;    pv.&quot;value&quot;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;AS player_value&#xA;FROM dbo.appearance app&#xA;JOIN dbo.d_players p ON app.player_id = p.id&#xA;JOIN dbo.d_games g ON app.game_id = g.id &#xA;JOIN dbo.d_competitions com ON app.competition_id = com.id&#xA;JOIN dbo.d_clubs c ON app.player_club_id = c.id&#xA;LEFT JOIN dbo.d_k_game_events ge ON g.id = ge.id_game AND app.player_id = ge.id_player_in&#xA;JOIN (&#xA;    SELECT id_player, MAX(&quot;date&quot;) AS max_date&#xA;    FROM dbo.d_k_player_valuations&#xA;    GROUP BY id_player&#xA;) max_pv ON p.id = max_pv.id_player&#xA;JOIN dbo.d_k_player_valuations pv ON p.id = pv.id_player AND max_pv.max_date = pv.&quot;date&quot;;&#xA;&#xA;select * from f_player_statistic"
-          SQLTask:ServerVersion="9"
-          SQLTask:ExtendedLogging="True"
-          SQLTask:LocalConnectionForLogging=""
-          SQLTask:TaskName=""
-          SQLTask:IgnoreDatabasesInNotOnlineState="False" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
-      </DTS:ObjectData>
-    </DTS:Executable>
     <DTS:Executable
       DTS:refId="Package\prepare_data"
       DTS:CreationName="Microsoft.Pipeline"
@@ -837,16 +815,33 @@
         </pipeline>
       </DTS:ObjectData>
     </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Upload f_player_statistic"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{1CF4CA0A-C638-4413-AEA7-D369832ECF9C}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Upload f_player_statistic"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{58D80DC5-6397-41F8-A2BC-CF0A25F53148}"
+          SQLTask:SqlStatementSource="INSERT INTO f_player_statistic&#xA;                         (id, id_player, id_game, id_competition, id_club, id_k_game_event, [date], player_name, is_started, goals, assists, yellow_cards, red_cards, minutes_played, player_value)&#xA;SELECT        app.appearance_id, p.id AS id_player, g.id AS id_game, com.id AS id_competition, c.id AS id_club, ge.id AS id_k_game_event, app.[date], app.player_name, CASE WHEN ge.id_player_in IS NOT NULL &#xA;                         THEN 0 ELSE 1 END AS is_started, app.goals, app.assists, app.yellow_cards, app.red_cards, app.minutes_played, pv.[value] AS player_value&#xA;FROM            appearance AS app INNER JOIN&#xA;                         d_players AS p ON app.player_id = p.id INNER JOIN&#xA;                         d_games AS g ON app.game_id = g.id INNER JOIN&#xA;                         d_competitions AS com ON app.competition_id = com.id INNER JOIN&#xA;                         d_clubs AS c ON app.player_club_id = c.id LEFT OUTER JOIN&#xA;                         d_k_game_events AS ge ON g.id = ge.id_game AND app.player_id = ge.id_player_in INNER JOIN&#xA;                             (SELECT        id_player, MAX([date]) AS max_date&#xA;                               FROM            d_k_player_valuations&#xA;                               GROUP BY id_player) AS max_pv ON p.id = max_pv.id_player INNER JOIN&#xA;                         d_k_player_valuations AS pv ON p.id = pv.id_player AND max_pv.max_date = pv.[date]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
   </DTS:Executables>
   <DTS:PrecedenceConstraints>
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint]"
       DTS:CreationName=""
-      DTS:DTSID="{00375F3B-8004-4A1F-B532-FDCD23C6585D}"
+      DTS:DTSID="{B69E21FC-310B-4B38-89A7-F66F7FB8DA4F}"
       DTS:From="Package\prepare_data"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
-      DTS:To="Package\Load table f_player_statistic" />
+      DTS:To="Package\Upload f_player_statistic" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
@@ -861,27 +856,27 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="215,42"
-          Id="Package\Load table f_player_statistic"
-          TopLeft="34,187" />
-        <NodeLayout
           Size="144,42"
           Id="Package\prepare_data"
-          TopLeft="71,37" />
+          TopLeft="71,36" />
+        <NodeLayout
+          Size="199,42"
+          Id="Package\Upload f_player_statistic"
+          TopLeft="46.5,188.5" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="142.25,79">
+          TopLeft="144.5,78">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,108"
+              EndConnector="0,110.5"
               Start="0,0"
-              End="0,100.5">
+              End="0,103">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,100.5" />
+                    End="0,103" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
