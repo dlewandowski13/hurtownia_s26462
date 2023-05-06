@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="60"
-  DTS:VersionGUID="{57AE32DA-D918-4044-B6E6-F51BCDB59BF0}">
+  DTS:VersionBuild="61"
+  DTS:VersionGUID="{7DB596DF-4D5E-4B14-AEBE-1BDF84896C71}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -829,7 +829,7 @@
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{58D80DC5-6397-41F8-A2BC-CF0A25F53148}"
-          SQLTask:SqlStatementSource="INSERT INTO f_player_statistic&#xA;                         (id, id_player, id_game, id_competition, id_club, id_k_game_event, [date], player_name, is_started, player_team, home_team, away_team, match_result, goals, assists, yellow_cards, red_cards, minutes_played, player_value)&#xA;SELECT        app.appearance_id, p.id AS id_player, g.id AS id_game, com.id AS id_competition, c.id AS id_club, ge.id AS id_k_game_event, app.[date], app.player_name, CASE WHEN ge.id_player_in IS NOT NULL &#xA;                         THEN 0 ELSE 1 END AS is_started, c.name, g.home_team, g.away_team, g.match_result, app.goals, app.assists, app.yellow_cards, app.red_cards, app.minutes_played, pv.[value] AS player_value&#xA;FROM            appearance AS app INNER JOIN&#xA;                         d_players AS p ON app.player_id = p.id INNER JOIN&#xA;                         d_games AS g ON app.game_id = g.id INNER JOIN&#xA;                         d_competitions AS com ON app.competition_id = com.id INNER JOIN&#xA;                         d_clubs AS c ON app.player_club_id = c.id LEFT OUTER JOIN&#xA;                         d_k_game_events AS ge ON g.id = ge.id_game AND app.player_id = ge.id_player_in INNER JOIN&#xA;                             (SELECT        id_player, MAX([date]) AS max_date&#xA;                               FROM            d_k_player_valuations&#xA;                               GROUP BY id_player) AS max_pv ON p.id = max_pv.id_player INNER JOIN&#xA;                         d_k_player_valuations AS pv ON p.id = pv.id_player AND max_pv.max_date = pv.[date]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="INSERT INTO f_player_statistic&#xA;                         (id, id_player, id_game, id_competition, id_club, id_k_game_event, [date], player_name, is_started, player_team, home_team, away_team, match_result, goals, assists, yellow_cards, red_cards, minutes_played, player_value)&#xA;SELECT        app.appearance_id, p.id AS id_player, g.id AS id_game, com.id AS id_competition, c.id AS id_club, ge.id AS id_k_game_event, app.[date], app.player_name, CASE WHEN ge.id_player_in IS NOT NULL &#xA;                         THEN 0 ELSE 1 END AS is_started, c.name, g.home_team, g.away_team, g.match_result, app.goals, app.assists, app.yellow_cards, app.red_cards, app.minutes_played, pv.[value] AS player_value&#xA;FROM            appearance AS app INNER JOIN&#xA;                         d_players AS p ON app.player_id = p.id INNER JOIN&#xA;                         d_games AS g ON app.game_id = g.id INNER JOIN&#xA;                         d_competitions AS com ON app.competition_id = com.id INNER JOIN&#xA;                         d_clubs AS c ON app.player_club_id = c.id LEFT OUTER JOIN&#xA;                         d_k_game_events AS ge ON g.id = ge.id_game AND app.player_id = ge.id_player_in INNER JOIN&#xA;                             (SELECT        id_player, MAX([date]) AS max_date&#xA;                               FROM            d_k_player_valuations&#xA;                               GROUP BY id_player) AS max_pv ON p.id = max_pv.id_player INNER JOIN&#xA;                         d_k_player_valuations AS pv ON p.id = pv.id_player AND max_pv.max_date = pv.[date]&#xA;ORDER BY id_game" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
