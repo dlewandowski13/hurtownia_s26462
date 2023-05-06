@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="102"
-  DTS:VersionGUID="{3AC8C19A-6918-4D77-9865-9FC37EEC43E4}">
+  DTS:VersionBuild="108"
+  DTS:VersionGUID="{C2F97214-4CF0-46B2-90EF-B362092E8AEA}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -448,15 +448,16 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="game_id"
-              DTS:DTSID="{26FB017F-2D76-4B03-A8A0-515B65566007}"
+              DTS:DTSID="{08F774A9-9A95-466C-8DE1-975A4AB3CB64}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:DataType="3"
+              DTS:MaximumWidth="10"
+              DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="competition_id"
-              DTS:DTSID="{E3795688-5D4C-474A-80BE-7AD62BC8E87E}"
+              DTS:DTSID="{4F34B907-2F5F-46AB-9897-B94308ACA03C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -465,7 +466,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="competition_type"
-              DTS:DTSID="{5302F944-F435-4CFF-B487-E0079545E05B}"
+              DTS:DTSID="{A942E252-3FE7-40DF-A60D-00D2C5DB8481}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -474,7 +475,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="season"
-              DTS:DTSID="{EDE83F8E-286B-4EF9-979B-65B2ED506582}"
+              DTS:DTSID="{E62658CD-6B1F-46A1-B2C8-8F9984AB2C4F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -483,7 +484,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="round"
-              DTS:DTSID="{3ED2FB43-9C3B-44EB-931D-D6F64301DC08}"
+              DTS:DTSID="{3923F7E0-17C7-4439-AFBC-71343B7EE16E}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -491,7 +492,7 @@
               DTS:DataType="7"
               DTS:TextQualified="True"
               DTS:ObjectName="date"
-              DTS:DTSID="{5B0478C4-38EB-47C8-ABE5-518F38CB21F0}"
+              DTS:DTSID="{4E374908-134B-4274-88AC-BBA831664B9F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -500,7 +501,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="home_club_id"
-              DTS:DTSID="{01340E44-AA67-4BFD-B435-8EC28F2211FA}"
+              DTS:DTSID="{0521BA12-0961-4167-BCDE-3DAB5247B016}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -509,7 +510,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="away_club_id"
-              DTS:DTSID="{14191E96-B6DB-453E-9656-3ABB33F13764}"
+              DTS:DTSID="{6ABCB6F7-0B23-4AB9-940C-1D032C23A36F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -518,7 +519,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="home_club_goals"
-              DTS:DTSID="{C399B903-9EBE-4FBB-9B68-A9219DDB4D29}"
+              DTS:DTSID="{B6E180DF-AC16-475C-87A6-8A1362745599}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -527,16 +528,16 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="away_club_goals"
-              DTS:DTSID="{3D137EF0-DA21-484C-9839-1D71FF896840}"
+              DTS:DTSID="{64A2FB34-D5B3-48A2-93DF-DEAE6C134EB6}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
+              DTS:MaximumWidth="10"
+              DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="aggregate"
-              DTS:DTSID="{93489180-9B16-421C-87C1-799428F4E0F4}"
+              DTS:DTSID="{4B08B821-31AB-4812-AE3A-631A6C4F20D3}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -545,7 +546,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="home_club_position"
-              DTS:DTSID="{10442C97-A44A-4EC8-9A5F-8F76E1B1A184}"
+              DTS:DTSID="{945D0729-DF74-4C31-A53E-472F3320DA13}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -554,7 +555,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="away_club_position"
-              DTS:DTSID="{7F51F21B-A52E-4B04-8FA8-0E577E87C73F}"
+              DTS:DTSID="{05393FB7-BB27-48F3-A02B-8DD1070F4A47}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -563,7 +564,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="club_home_name"
-              DTS:DTSID="{8AA50605-F054-4DE9-889A-61BF6031A734}"
+              DTS:DTSID="{EEB3B5FA-2413-42B5-9606-DBBA2DD31CC3}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -572,7 +573,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="club_away_name"
-              DTS:DTSID="{73A1A638-F1B4-4A9F-B9EB-E5114AD26564}"
+              DTS:DTSID="{138EA3FD-D8C4-4E4E-956F-683050AE1540}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -581,7 +582,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="home_club_manager_name"
-              DTS:DTSID="{9CDBEC51-3CED-4ED7-A8D8-E2F7BE021179}"
+              DTS:DTSID="{13112151-483F-4297-B80B-B25D3B01A53F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -590,7 +591,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="away_club_manager_name"
-              DTS:DTSID="{4A051B0A-495E-4908-A2A6-F59E2FF27B76}"
+              DTS:DTSID="{7AD6C5BD-8A76-4714-A06A-84221CEF31B6}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -599,7 +600,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="stadium"
-              DTS:DTSID="{BDF35A17-E7DB-4D33-A7D6-F0E76499FED2}"
+              DTS:DTSID="{C394DCDC-C388-4787-A0F1-FB31C0580BE5}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -608,7 +609,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="attendance"
-              DTS:DTSID="{F5B16362-CC6C-40CB-A50A-0113D0F7485B}"
+              DTS:DTSID="{1400DBEC-2320-4B79-A86C-983BF4276962}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -617,7 +618,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="referee"
-              DTS:DTSID="{A2EBA7EE-8B28-49ED-A8D5-C2BC424DB166}"
+              DTS:DTSID="{42CF1015-C798-4CBD-B684-B5D6515BDF4E}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -626,7 +627,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="url"
-              DTS:DTSID="{BA63F4CD-4B2F-4D55-8CDB-9636F2C558C0}"
+              DTS:DTSID="{BE7EF8F4-BCAE-439B-A7FE-D622E4499729}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -3217,6 +3218,13 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                       cachedName="competition_id"
                       externalMetadataColumnId="Package\Upload games\d_games.Inputs[OLE DB Destination Input].ExternalColumns[competition]"
                       lineageId="Package\Upload games\games_csv.Outputs[Flat File Source Output].Columns[competition_id]" />
+                    <inputColumn
+                      refId="Package\Upload games\d_games.Inputs[OLE DB Destination Input].Columns[aggregate]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="aggregate"
+                      externalMetadataColumnId="Package\Upload games\d_games.Inputs[OLE DB Destination Input].ExternalColumns[match_result]"
+                      lineageId="Package\Upload games\games_csv.Outputs[Flat File Source Output].Columns[aggregate]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -3248,6 +3256,11 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                       dataType="wstr"
                       length="10"
                       name="competition" />
+                    <externalMetadataColumn
+                      refId="Package\Upload games\d_games.Inputs[OLE DB Destination Input].ExternalColumns[match_result]"
+                      dataType="wstr"
+                      length="255"
+                      name="match_result" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -3433,6 +3446,27 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                           name="UseBinaryFormat">false</property>
                       </properties>
                     </outputColumn>
+                    <outputColumn
+                      refId="Package\Upload games\games_csv.Outputs[Flat File Source Output].Columns[aggregate]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Upload games\games_csv.Outputs[Flat File Source Output].ExternalColumns[aggregate]"
+                      length="10"
+                      lineageId="Package\Upload games\games_csv.Outputs[Flat File Source Output].Columns[aggregate]"
+                      name="aggregate"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -3444,7 +3478,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                       name="game_id" />
                     <externalMetadataColumn
                       refId="Package\Upload games\games_csv.Outputs[Flat File Source Output].ExternalColumns[competition_id]"
-                      dataType="i4"
+                      dataType="wstr"
+                      length="10"
                       name="competition_id" />
                     <externalMetadataColumn
                       refId="Package\Upload games\games_csv.Outputs[Flat File Source Output].ExternalColumns[competition_type]"
@@ -3493,9 +3528,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                       name="away_club_goals" />
                     <externalMetadataColumn
                       refId="Package\Upload games\games_csv.Outputs[Flat File Source Output].ExternalColumns[aggregate]"
-                      codePage="65001"
-                      dataType="str"
-                      length="50"
+                      dataType="wstr"
+                      length="10"
                       name="aggregate" />
                     <externalMetadataColumn
                       refId="Package\Upload games\games_csv.Outputs[Flat File Source Output].ExternalColumns[home_club_position]"
@@ -4772,7 +4806,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
     design-time-name="Package\Upload competitions">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="216,42"
           Id="Package\Upload competitions\wyznaczenie knocout_stage"
@@ -4804,7 +4838,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -4826,7 +4862,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -4849,15 +4887,15 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
     design-time-name="Package\Upload game events">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="156,42"
-          Id="Package\Upload game events\Flat File Source"
-          TopLeft="168,56" />
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="169,42"
           Id="Package\Upload game events\d_k_game_events"
           TopLeft="161,191" />
+        <NodeLayout
+          Size="156,42"
+          Id="Package\Upload game events\Flat File Source"
+          TopLeft="168,56" />
         <EdgeLayout
           Id="Package\Upload game events.Paths[Flat File Source Output]"
           TopLeft="245.75,98">
@@ -4877,7 +4915,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -4900,7 +4940,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
     design-time-name="Package\Upload games">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="135,42"
           Id="Package\Upload games\games_csv"
@@ -4928,9 +4968,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -4953,7 +4991,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
     design-time-name="Package\upload player valuations">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="187,42"
           Id="Package\upload player valuations\player_valuations_csv"
@@ -4981,7 +5019,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -5004,7 +5044,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
     design-time-name="Package\Upload players">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="137,42"
           Id="Package\Upload players\players_csv"
@@ -5032,7 +5072,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>

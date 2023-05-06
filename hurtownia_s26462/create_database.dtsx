@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="create_database"
   DTS:PackageType="5"
-  DTS:VersionBuild="74"
-  DTS:VersionGUID="{7A31BD21-6357-4CEF-8695-209E8A81BF26}">
+  DTS:VersionBuild="79"
+  DTS:VersionGUID="{41737846-D59D-48B2-BBBA-89DC68FAD58C}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -389,7 +389,7 @@
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{A03DBFE5-ACCC-4917-B36B-192FBE8DF1E7}"
-          SQLTask:SqlStatementSource="USE hurtownia_s26462;&#xA;&#xA;IF NOT EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'd_games' AND TABLE_SCHEMA = 'dbo')&#xA;BEGIN&#xA;    CREATE TABLE dbo.d_games (&#xA;        id INT PRIMARY KEY IDENTITY(1,1),&#xA;        date DATE,&#xA;        home_team NVARCHAR(255),&#xA;        away_team NVARCHAR(255),&#xA;        round NVARCHAR(255),&#xA;        competition NVARCHAR(10),&#xA;        FOREIGN KEY (competition) REFERENCES dbo.d_competitions(id)&#xA;    );&#xA;END"
+          SQLTask:SqlStatementSource="USE hurtownia_s26462;&#xA;&#xA;IF NOT EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'd_games' AND TABLE_SCHEMA = 'dbo')&#xA;BEGIN&#xA;    CREATE TABLE dbo.d_games (&#xA;        id INT PRIMARY KEY IDENTITY(1,1),&#xA;        date DATE,&#xA;        home_team NVARCHAR(255),&#xA;        away_team NVARCHAR(255),&#xA;        round NVARCHAR(255),&#xA;        match_result NVARCHAR(10),&#xA;        competition NVARCHAR(10),&#xA;        FOREIGN KEY (competition) REFERENCES dbo.d_competitions(id)&#xA;    );&#xA;END"
           SQLTask:ServerVersion="9"
           SQLTask:ExtendedLogging="True"
           SQLTask:LocalConnectionForLogging=""
@@ -477,7 +477,7 @@
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{A03DBFE5-ACCC-4917-B36B-192FBE8DF1E7}"
-          SQLTask:SqlStatementSource="USE hurtownia_s26462;&#xA;&#xA;IF NOT EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'f_player_statistic' AND TABLE_SCHEMA = 'dbo')&#xA;BEGIN&#xA;    CREATE TABLE dbo.f_player_statistic (&#xA;        id nvarchar(50) NULL,&#xA;        id_player INT NULL,&#xA;        id_game INT NULL,&#xA;        id_competition nvarchar(10) NULL,&#xA;        id_club INT NULL,&#xA;        id_k_game_event INT NULL,&#xA;        date DATE NULL,&#xA;        player_name NVARCHAR(255) NULL,&#xA;        is_started BIT NULL,&#xA;        goals INT NULL,&#xA;        assists INT NULL,&#xA;        yellow_cards INT NULL,&#xA;        red_cards INT NULL,&#xA;        minutes_played INT NULL,&#xA;        player_value INT NULL&#xA;    );&#xA;END&#xA;"
+          SQLTask:SqlStatementSource="USE hurtownia_s26462;&#xA;&#xA;IF NOT EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'f_player_statistic' AND TABLE_SCHEMA = 'dbo')&#xA;BEGIN&#xA;    CREATE TABLE dbo.f_player_statistic (&#xA;        id nvarchar(50) NULL,&#xA;        id_player INT NULL,&#xA;        id_game INT NULL,&#xA;        id_competition nvarchar(10) NULL,&#xA;        id_club INT NULL,&#xA;        id_k_game_event INT NULL,&#xA;        date DATE NULL,&#xA;        player_name NVARCHAR(255) NULL,&#xA;        is_started BIT NULL,&#xA;        player_team NVARCHAR(255) NULL,&#xA;        home_team NVARCHAR(255) NULL,&#xA;        away_team NVARCHAR(255) NULL,&#x9;&#xA;        match_result NVARCHAR(10) NULL,&#xA;        goals INT NULL,&#xA;        assists INT NULL,&#xA;        yellow_cards INT NULL,&#xA;        red_cards INT NULL,&#xA;        minutes_played INT NULL,&#xA;        player_value INT NULL&#xA;    );&#xA;END&#xA;"
           SQLTask:ServerVersion="9"
           SQLTask:ExtendedLogging="True"
           SQLTask:LocalConnectionForLogging=""
