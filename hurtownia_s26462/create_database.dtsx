@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="create_database"
   DTS:PackageType="5"
-  DTS:VersionBuild="79"
-  DTS:VersionGUID="{41737846-D59D-48B2-BBBA-89DC68FAD58C}">
+  DTS:VersionBuild="81"
+  DTS:VersionGUID="{0EED5B1A-FD2D-4363-9E44-92D197B19083}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
