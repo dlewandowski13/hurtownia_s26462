@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="57"
-  DTS:VersionGUID="{851B101E-26B7-4AA7-9EC8-77497EE690B2}">
+  DTS:VersionBuild="70"
+  DTS:VersionGUID="{401F37CC-7B14-4B6E-8662-726F4146FC85}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -169,6 +169,28 @@
   <DTS:Variables />
   <DTS:Executables>
     <DTS:Executable
+      DTS:refId="Package\clear"
+      DTS:CreationName="Microsoft.DbMaintenanceTSQLExecuteTask"
+      DTS:Description="Execute T-SQL Statement Task"
+      DTS:DTSID="{b0b143d0-884b-4a7a-9d8e-b7f345296bb3}"
+      DTS:ExecutableType="Microsoft.DbMaintenanceTSQLExecuteTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="clear"
+      DTS:TaskContact="Execute T-SQL Statement Task; Microsoft Corporation; Microsoft SQL Server v9; © 2004 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{A03DBFE5-ACCC-4917-B36B-192FBE8DF1E7}"
+          SQLTask:SqlStatementSource="USE hurtownia_s26462;&#xA;&#xA;IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'appearance' AND TABLE_SCHEMA = 'dbo')&#xA;BEGIN&#xA;    TRUNCATE TABLE dbo.appearance;&#xA;    DROP TABLE dbo.appearance;&#x9;&#xA;END"
+          SQLTask:ServerVersion="9"
+          SQLTask:ExtendedLogging="True"
+          SQLTask:LocalConnectionForLogging=""
+          SQLTask:TaskName=""
+          SQLTask:IgnoreDatabasesInNotOnlineState="False" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
       DTS:refId="Package\prepare_data"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
@@ -182,6 +204,245 @@
         <pipeline
           version="1">
           <components>
+            <component
+              refId="Package\prepare_data\appearances"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="appearances"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[appearance]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1250</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">true</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">true</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\prepare_data\appearances.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[hurtownia_s26462]"
+                  connectionManagerRefId="Package.ConnectionManagers[hurtownia_s26462]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\prepare_data\appearances.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\prepare_data\appearances.Inputs[OLE DB Destination Input].Columns[appearance_id]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="appearance_id"
+                      externalMetadataColumnId="Package\prepare_data\appearances.Inputs[OLE DB Destination Input].ExternalColumns[appearance_id]"
+                      lineageId="Package\prepare_data\appearances_csv.Outputs[Flat File Source Output].Columns[appearance_id]" />
+                    <inputColumn
+                      refId="Package\prepare_data\appearances.Inputs[OLE DB Destination Input].Columns[game_id]"
+                      cachedDataType="i4"
+                      cachedName="game_id"
+                      externalMetadataColumnId="Package\prepare_data\appearances.Inputs[OLE DB Destination Input].ExternalColumns[game_id]"
+                      lineageId="Package\prepare_data\appearances_csv.Outputs[Flat File Source Output].Columns[game_id]" />
+                    <inputColumn
+                      refId="Package\prepare_data\appearances.Inputs[OLE DB Destination Input].Columns[player_id]"
+                      cachedDataType="i4"
+                      cachedName="player_id"
+                      externalMetadataColumnId="Package\prepare_data\appearances.Inputs[OLE DB Destination Input].ExternalColumns[player_id]"
+                      lineageId="Package\prepare_data\appearances_csv.Outputs[Flat File Source Output].Columns[player_id]" />
+                    <inputColumn
+                      refId="Package\prepare_data\appearances.Inputs[OLE DB Destination Input].Columns[player_club_id]"
+                      cachedDataType="i4"
+                      cachedName="player_club_id"
+                      externalMetadataColumnId="Package\prepare_data\appearances.Inputs[OLE DB Destination Input].ExternalColumns[player_club_id]"
+                      lineageId="Package\prepare_data\appearances_csv.Outputs[Flat File Source Output].Columns[player_club_id]" />
+                    <inputColumn
+                      refId="Package\prepare_data\appearances.Inputs[OLE DB Destination Input].Columns[player_current_club_id]"
+                      cachedDataType="i4"
+                      cachedName="player_current_club_id"
+                      externalMetadataColumnId="Package\prepare_data\appearances.Inputs[OLE DB Destination Input].ExternalColumns[player_current_club_id]"
+                      lineageId="Package\prepare_data\appearances_csv.Outputs[Flat File Source Output].Columns[player_current_club_id]" />
+                    <inputColumn
+                      refId="Package\prepare_data\appearances.Inputs[OLE DB Destination Input].Columns[date]"
+                      cachedDataType="date"
+                      cachedName="date"
+                      externalMetadataColumnId="Package\prepare_data\appearances.Inputs[OLE DB Destination Input].ExternalColumns[date]"
+                      lineageId="Package\prepare_data\appearances_csv.Outputs[Flat File Source Output].Columns[date]" />
+                    <inputColumn
+                      refId="Package\prepare_data\appearances.Inputs[OLE DB Destination Input].Columns[player_name]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="player_name"
+                      externalMetadataColumnId="Package\prepare_data\appearances.Inputs[OLE DB Destination Input].ExternalColumns[player_name]"
+                      lineageId="Package\prepare_data\appearances_csv.Outputs[Flat File Source Output].Columns[player_name]" />
+                    <inputColumn
+                      refId="Package\prepare_data\appearances.Inputs[OLE DB Destination Input].Columns[competition_id]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="competition_id"
+                      externalMetadataColumnId="Package\prepare_data\appearances.Inputs[OLE DB Destination Input].ExternalColumns[competition_id]"
+                      lineageId="Package\prepare_data\appearances_csv.Outputs[Flat File Source Output].Columns[competition_id]" />
+                    <inputColumn
+                      refId="Package\prepare_data\appearances.Inputs[OLE DB Destination Input].Columns[yellow_cards]"
+                      cachedDataType="i4"
+                      cachedName="yellow_cards"
+                      externalMetadataColumnId="Package\prepare_data\appearances.Inputs[OLE DB Destination Input].ExternalColumns[yellow_cards]"
+                      lineageId="Package\prepare_data\appearances_csv.Outputs[Flat File Source Output].Columns[yellow_cards]" />
+                    <inputColumn
+                      refId="Package\prepare_data\appearances.Inputs[OLE DB Destination Input].Columns[red_cards]"
+                      cachedDataType="i4"
+                      cachedName="red_cards"
+                      externalMetadataColumnId="Package\prepare_data\appearances.Inputs[OLE DB Destination Input].ExternalColumns[red_cards]"
+                      lineageId="Package\prepare_data\appearances_csv.Outputs[Flat File Source Output].Columns[red_cards]" />
+                    <inputColumn
+                      refId="Package\prepare_data\appearances.Inputs[OLE DB Destination Input].Columns[goals]"
+                      cachedDataType="i4"
+                      cachedName="goals"
+                      externalMetadataColumnId="Package\prepare_data\appearances.Inputs[OLE DB Destination Input].ExternalColumns[goals]"
+                      lineageId="Package\prepare_data\appearances_csv.Outputs[Flat File Source Output].Columns[goals]" />
+                    <inputColumn
+                      refId="Package\prepare_data\appearances.Inputs[OLE DB Destination Input].Columns[assists]"
+                      cachedDataType="i4"
+                      cachedName="assists"
+                      externalMetadataColumnId="Package\prepare_data\appearances.Inputs[OLE DB Destination Input].ExternalColumns[assists]"
+                      lineageId="Package\prepare_data\appearances_csv.Outputs[Flat File Source Output].Columns[assists]" />
+                    <inputColumn
+                      refId="Package\prepare_data\appearances.Inputs[OLE DB Destination Input].Columns[minutes_played]"
+                      cachedDataType="i4"
+                      cachedName="minutes_played"
+                      externalMetadataColumnId="Package\prepare_data\appearances.Inputs[OLE DB Destination Input].ExternalColumns[minutes_played]"
+                      lineageId="Package\prepare_data\appearances_csv.Outputs[Flat File Source Output].Columns[minutes_played]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\prepare_data\appearances.Inputs[OLE DB Destination Input].ExternalColumns[appearance_id]"
+                      dataType="wstr"
+                      length="20"
+                      name="appearance_id" />
+                    <externalMetadataColumn
+                      refId="Package\prepare_data\appearances.Inputs[OLE DB Destination Input].ExternalColumns[game_id]"
+                      dataType="i4"
+                      name="game_id" />
+                    <externalMetadataColumn
+                      refId="Package\prepare_data\appearances.Inputs[OLE DB Destination Input].ExternalColumns[player_id]"
+                      dataType="i4"
+                      name="player_id" />
+                    <externalMetadataColumn
+                      refId="Package\prepare_data\appearances.Inputs[OLE DB Destination Input].ExternalColumns[player_club_id]"
+                      dataType="i4"
+                      name="player_club_id" />
+                    <externalMetadataColumn
+                      refId="Package\prepare_data\appearances.Inputs[OLE DB Destination Input].ExternalColumns[player_current_club_id]"
+                      dataType="i4"
+                      name="player_current_club_id" />
+                    <externalMetadataColumn
+                      refId="Package\prepare_data\appearances.Inputs[OLE DB Destination Input].ExternalColumns[date]"
+                      dataType="dbDate"
+                      name="date" />
+                    <externalMetadataColumn
+                      refId="Package\prepare_data\appearances.Inputs[OLE DB Destination Input].ExternalColumns[player_name]"
+                      dataType="wstr"
+                      length="255"
+                      name="player_name" />
+                    <externalMetadataColumn
+                      refId="Package\prepare_data\appearances.Inputs[OLE DB Destination Input].ExternalColumns[competition_id]"
+                      dataType="wstr"
+                      length="10"
+                      name="competition_id" />
+                    <externalMetadataColumn
+                      refId="Package\prepare_data\appearances.Inputs[OLE DB Destination Input].ExternalColumns[yellow_cards]"
+                      dataType="i4"
+                      name="yellow_cards" />
+                    <externalMetadataColumn
+                      refId="Package\prepare_data\appearances.Inputs[OLE DB Destination Input].ExternalColumns[red_cards]"
+                      dataType="i4"
+                      name="red_cards" />
+                    <externalMetadataColumn
+                      refId="Package\prepare_data\appearances.Inputs[OLE DB Destination Input].ExternalColumns[goals]"
+                      dataType="i4"
+                      name="goals" />
+                    <externalMetadataColumn
+                      refId="Package\prepare_data\appearances.Inputs[OLE DB Destination Input].ExternalColumns[assists]"
+                      dataType="i4"
+                      name="assists" />
+                    <externalMetadataColumn
+                      refId="Package\prepare_data\appearances.Inputs[OLE DB Destination Input].ExternalColumns[minutes_played]"
+                      dataType="i4"
+                      name="minutes_played" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\prepare_data\appearances.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\prepare_data\appearances.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\prepare_data\appearances.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\prepare_data\appearances.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\prepare_data\appearances.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\prepare_data\appearances.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
             <component
               refId="Package\prepare_data\appearances_csv"
               componentClassID="Microsoft.FlatFileSource"
@@ -565,250 +826,11 @@
                 </output>
               </outputs>
             </component>
-            <component
-              refId="Package\prepare_data\OLE DB Destination"
-              componentClassID="Microsoft.OLEDBDestination"
-              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
-              description="OLE DB Destination"
-              name="OLE DB Destination"
-              usesDispositions="true"
-              version="4">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                  name="CommandTimeout">0</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[appearance]</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the variable that contains the name of the database object used to open a rowset."
-                  name="OpenRowsetVariable"></property>
-                <property
-                  dataType="System.String"
-                  description="The SQL command to be executed."
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1250</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Forces the use of the DefaultCodePage property value when describing character data."
-                  name="AlwaysUseDefaultCodePage">false</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the mode used to access the database."
-                  name="AccessMode"
-                  typeConverter="AccessMode">3</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepIdentity">true</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepNulls">true</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
-                  name="FastLoadMaxInsertCommitSize">2147483647</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\prepare_data\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[hurtownia_s26462]"
-                  connectionManagerRefId="Package.ConnectionManagers[hurtownia_s26462]"
-                  description="The OLE DB runtime connection used to access the database."
-                  name="OleDbConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\prepare_data\OLE DB Destination.Inputs[OLE DB Destination Input]"
-                  errorOrTruncationOperation="Insert"
-                  errorRowDisposition="FailComponent"
-                  hasSideEffects="true"
-                  name="OLE DB Destination Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\prepare_data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[appearance_id]"
-                      cachedDataType="wstr"
-                      cachedLength="20"
-                      cachedName="appearance_id"
-                      externalMetadataColumnId="Package\prepare_data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[appearance_id]"
-                      lineageId="Package\prepare_data\appearances_csv.Outputs[Flat File Source Output].Columns[appearance_id]" />
-                    <inputColumn
-                      refId="Package\prepare_data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[game_id]"
-                      cachedDataType="i4"
-                      cachedName="game_id"
-                      externalMetadataColumnId="Package\prepare_data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[game_id]"
-                      lineageId="Package\prepare_data\appearances_csv.Outputs[Flat File Source Output].Columns[game_id]" />
-                    <inputColumn
-                      refId="Package\prepare_data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[player_id]"
-                      cachedDataType="i4"
-                      cachedName="player_id"
-                      externalMetadataColumnId="Package\prepare_data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[player_id]"
-                      lineageId="Package\prepare_data\appearances_csv.Outputs[Flat File Source Output].Columns[player_id]" />
-                    <inputColumn
-                      refId="Package\prepare_data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[player_club_id]"
-                      cachedDataType="i4"
-                      cachedName="player_club_id"
-                      externalMetadataColumnId="Package\prepare_data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[player_club_id]"
-                      lineageId="Package\prepare_data\appearances_csv.Outputs[Flat File Source Output].Columns[player_club_id]" />
-                    <inputColumn
-                      refId="Package\prepare_data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[player_current_club_id]"
-                      cachedDataType="i4"
-                      cachedName="player_current_club_id"
-                      externalMetadataColumnId="Package\prepare_data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[player_current_club_id]"
-                      lineageId="Package\prepare_data\appearances_csv.Outputs[Flat File Source Output].Columns[player_current_club_id]" />
-                    <inputColumn
-                      refId="Package\prepare_data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[date]"
-                      cachedDataType="date"
-                      cachedName="date"
-                      externalMetadataColumnId="Package\prepare_data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[date]"
-                      lineageId="Package\prepare_data\appearances_csv.Outputs[Flat File Source Output].Columns[date]" />
-                    <inputColumn
-                      refId="Package\prepare_data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[player_name]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="player_name"
-                      externalMetadataColumnId="Package\prepare_data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[player_name]"
-                      lineageId="Package\prepare_data\appearances_csv.Outputs[Flat File Source Output].Columns[player_name]" />
-                    <inputColumn
-                      refId="Package\prepare_data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[competition_id]"
-                      cachedDataType="wstr"
-                      cachedLength="10"
-                      cachedName="competition_id"
-                      externalMetadataColumnId="Package\prepare_data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[competition_id]"
-                      lineageId="Package\prepare_data\appearances_csv.Outputs[Flat File Source Output].Columns[competition_id]" />
-                    <inputColumn
-                      refId="Package\prepare_data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[yellow_cards]"
-                      cachedDataType="i4"
-                      cachedName="yellow_cards"
-                      externalMetadataColumnId="Package\prepare_data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[yellow_cards]"
-                      lineageId="Package\prepare_data\appearances_csv.Outputs[Flat File Source Output].Columns[yellow_cards]" />
-                    <inputColumn
-                      refId="Package\prepare_data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[red_cards]"
-                      cachedDataType="i4"
-                      cachedName="red_cards"
-                      externalMetadataColumnId="Package\prepare_data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[red_cards]"
-                      lineageId="Package\prepare_data\appearances_csv.Outputs[Flat File Source Output].Columns[red_cards]" />
-                    <inputColumn
-                      refId="Package\prepare_data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[goals]"
-                      cachedDataType="i4"
-                      cachedName="goals"
-                      externalMetadataColumnId="Package\prepare_data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[goals]"
-                      lineageId="Package\prepare_data\appearances_csv.Outputs[Flat File Source Output].Columns[goals]" />
-                    <inputColumn
-                      refId="Package\prepare_data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[assists]"
-                      cachedDataType="i4"
-                      cachedName="assists"
-                      externalMetadataColumnId="Package\prepare_data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[assists]"
-                      lineageId="Package\prepare_data\appearances_csv.Outputs[Flat File Source Output].Columns[assists]" />
-                    <inputColumn
-                      refId="Package\prepare_data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[minutes_played]"
-                      cachedDataType="i4"
-                      cachedName="minutes_played"
-                      externalMetadataColumnId="Package\prepare_data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[minutes_played]"
-                      lineageId="Package\prepare_data\appearances_csv.Outputs[Flat File Source Output].Columns[minutes_played]" />
-                  </inputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\prepare_data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[appearance_id]"
-                      dataType="wstr"
-                      length="20"
-                      name="appearance_id" />
-                    <externalMetadataColumn
-                      refId="Package\prepare_data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[game_id]"
-                      dataType="i4"
-                      name="game_id" />
-                    <externalMetadataColumn
-                      refId="Package\prepare_data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[player_id]"
-                      dataType="i4"
-                      name="player_id" />
-                    <externalMetadataColumn
-                      refId="Package\prepare_data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[player_club_id]"
-                      dataType="i4"
-                      name="player_club_id" />
-                    <externalMetadataColumn
-                      refId="Package\prepare_data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[player_current_club_id]"
-                      dataType="i4"
-                      name="player_current_club_id" />
-                    <externalMetadataColumn
-                      refId="Package\prepare_data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[date]"
-                      dataType="dbDate"
-                      name="date" />
-                    <externalMetadataColumn
-                      refId="Package\prepare_data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[player_name]"
-                      dataType="wstr"
-                      length="255"
-                      name="player_name" />
-                    <externalMetadataColumn
-                      refId="Package\prepare_data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[competition_id]"
-                      dataType="wstr"
-                      length="10"
-                      name="competition_id" />
-                    <externalMetadataColumn
-                      refId="Package\prepare_data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[yellow_cards]"
-                      dataType="i4"
-                      name="yellow_cards" />
-                    <externalMetadataColumn
-                      refId="Package\prepare_data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[red_cards]"
-                      dataType="i4"
-                      name="red_cards" />
-                    <externalMetadataColumn
-                      refId="Package\prepare_data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[goals]"
-                      dataType="i4"
-                      name="goals" />
-                    <externalMetadataColumn
-                      refId="Package\prepare_data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[assists]"
-                      dataType="i4"
-                      name="assists" />
-                    <externalMetadataColumn
-                      refId="Package\prepare_data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[minutes_played]"
-                      dataType="i4"
-                      name="minutes_played" />
-                  </externalMetadataColumns>
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\prepare_data\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\prepare_data\OLE DB Destination.Inputs[OLE DB Destination Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\prepare_data\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\prepare_data\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\prepare_data\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\prepare_data\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
           </components>
           <paths>
             <path
               refId="Package\prepare_data.Paths[Flat File Source Output]"
-              endId="Package\prepare_data\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              endId="Package\prepare_data\appearances.Inputs[OLE DB Destination Input]"
               name="Flat File Source Output"
               startId="Package\prepare_data\appearances_csv.Outputs[Flat File Source Output]" />
           </paths>
@@ -829,7 +851,7 @@
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{58D80DC5-6397-41F8-A2BC-CF0A25F53148}"
-          SQLTask:SqlStatementSource="INSERT INTO f_player_statistic&#xA;                         (id, id_player, id_game, id_competition, id_club, id_k_game_event, [date], player_name, is_started, goals, assists, yellow_cards, red_cards, minutes_played, player_value)&#xA;SELECT        app.appearance_id, p.id AS id_player, g.id AS id_game, com.id AS id_competition, c.id AS id_club, ge.id AS id_k_game_event, app.[date], app.player_name, CASE WHEN ge.id_player_in IS NOT NULL &#xA;                         THEN 0 ELSE 1 END AS is_started, app.goals, app.assists, app.yellow_cards, app.red_cards, app.minutes_played, pv.[value] AS player_value&#xA;FROM            appearance AS app INNER JOIN&#xA;                         d_players AS p ON app.player_id = p.id INNER JOIN&#xA;                         d_games AS g ON app.game_id = g.id INNER JOIN&#xA;                         d_competitions AS com ON app.competition_id = com.id INNER JOIN&#xA;                         d_clubs AS c ON app.player_club_id = c.id LEFT OUTER JOIN&#xA;                         d_k_game_events AS ge ON g.id = ge.id_game AND app.player_id = ge.id_player_in INNER JOIN&#xA;                             (SELECT        id_player, MAX([date]) AS max_date&#xA;                               FROM            d_k_player_valuations&#xA;                               GROUP BY id_player) AS max_pv ON p.id = max_pv.id_player INNER JOIN&#xA;                         d_k_player_valuations AS pv ON p.id = pv.id_player AND max_pv.max_date = pv.[date]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="INSERT INTO f_player_statistic&#xA;                         (id, id_player, id_game, id_competition, id_club, id_k_game_event, [date], player_name, is_started, player_team, home_team, away_team, match_result, goals, assists, yellow_cards, red_cards, minutes_played, player_value)&#xA;SELECT        app.appearance_id AS id, p.id AS id_player, g.id AS id_game, com.id AS id_competition, c.id AS id_club, ge.id AS id_k_game_event, app.[date], app.player_name, CASE WHEN ge.id_player_in IS NOT NULL &#xA;                         THEN 0 ELSE 1 END AS is_started, c.name AS player_team, g.home_team, g.away_team, g.match_result, app.goals, app.assists, app.yellow_cards, app.red_cards, app.minutes_played, pv.[value] AS player_value&#xA;FROM            appearance AS app INNER JOIN&#xA;                         d_players AS p ON app.player_id = p.id INNER JOIN&#xA;                         d_games AS g ON app.game_id = g.id INNER JOIN&#xA;                         d_competitions AS com ON app.competition_id = com.id INNER JOIN&#xA;                         d_clubs AS c ON app.player_club_id = c.id LEFT OUTER JOIN&#xA;                         d_k_game_events AS ge ON g.id = ge.id_game AND app.player_id = ge.id_player_in INNER JOIN&#xA;                             (SELECT        id_player, MAX([date]) AS max_date&#xA;                               FROM            d_k_player_valuations&#xA;                               GROUP BY id_player) AS max_pv ON p.id = max_pv.id_player INNER JOIN&#xA;                         d_k_player_valuations AS pv ON p.id = pv.id_player AND max_pv.max_date = pv.[date]&#xA;ORDER BY id_game" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
@@ -842,6 +864,14 @@
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
       DTS:To="Package\Upload f_player_statistic" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{9F00DEBE-1175-4324-93B5-EB255C1F908A}"
+      DTS:From="Package\Upload f_player_statistic"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\clear" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
@@ -854,7 +884,11 @@
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="103,42"
+          Id="Package\clear"
+          TopLeft="92.5,287.5" />
         <NodeLayout
           Size="144,42"
           Id="Package\prepare_data"
@@ -885,48 +919,20 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </Package>
-  <TaskHost
-    design-time-name="Package\prepare_data">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="165,42"
-          Id="Package\prepare_data\appearances_csv"
-          TopLeft="88,40" />
-        <NodeLayout
-          Size="177,42"
-          Id="Package\prepare_data\OLE DB Destination"
-          TopLeft="109,138" />
         <EdgeLayout
-          Id="Package\prepare_data.Paths[Flat File Source Output]"
-          TopLeft="170.5,82">
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="145,230.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="27,56"
+              EndConnector="0,57"
               Start="0,0"
-              End="27,48.5">
+              End="0,49.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,24" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,24"
-                    Point2="0,28"
-                    Point3="4,28" />
-                  <mssgle:LineSegment
-                    End="23,28" />
-                  <mssgle:CubicBezierSegment
-                    Point1="23,28"
-                    Point2="27,28"
-                    Point3="27,32" />
-                  <mssgle:LineSegment
-                    End="27,48.5" />
+                    End="0,49.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -937,9 +943,49 @@
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\prepare_data">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="165,42"
+          Id="Package\prepare_data\appearances_csv"
+          TopLeft="88,40" />
+        <NodeLayout
+          Size="143,42"
+          Id="Package\prepare_data\appearances"
+          TopLeft="106,132" />
+        <EdgeLayout
+          Id="Package\prepare_data.Paths[Flat File Source Output]"
+          TopLeft="174,82">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,50"
+              Start="0,0"
+              End="0,42.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,42.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\prepare_data\OLE DB Destination">
+    design-time-name="Package\prepare_data\appearances">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
