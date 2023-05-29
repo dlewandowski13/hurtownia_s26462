@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="110"
-  DTS:VersionGUID="{021A8007-0B6E-4874-8E29-1F24EED3CCAF}">
+  DTS:VersionBuild="116"
+  DTS:VersionGUID="{9E850F55-F875-4D5B-9A75-9C4ACE866DA6}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -1720,7 +1720,7 @@
                       cachedDataType="bool"
                       cachedName="knockout_stage"
                       externalMetadataColumnId="Package\Upload competitions\d_competitions.Inputs[OLE DB Destination Input].ExternalColumns[knockout_stage]"
-                      lineageId="Package\Upload competitions\wyznaczenie knocout_stage.Outputs[Output 0].Columns[knockout_stage]" />
+                      lineageId="Package\Upload competitions\wyznaczenie knockout_stage.Outputs[Output 0].Columns[knockout_stage]" />
                     <inputColumn
                       refId="Package\Upload competitions\d_competitions.Inputs[OLE DB Destination Input].Columns[competition_id]"
                       cachedDataType="wstr"
@@ -1774,11 +1774,11 @@
               </outputs>
             </component>
             <component
-              refId="Package\Upload competitions\wyznaczenie knocout_stage"
+              refId="Package\Upload competitions\wyznaczenie knockout_stage"
               componentClassID="Microsoft.ManagedComponentHost"
               contactInfo="Includes and runs custom script code. For example, apply a business rule that limits the range of valid values in an &quot;income&quot; column or add values in two columns and calculate the average of the sum.;Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;13"
               description="Includes and runs custom script code. For example, apply a business rule that limits the range of valid values in an &quot;income&quot; column or add values in two columns and calculate the average of the sum."
-              name="wyznaczenie knocout_stage"
+              name="wyznaczenie knockout_stage"
               version="13">
               <properties>
                 <property
@@ -2659,18 +2659,18 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
               </properties>
               <inputs>
                 <input
-                  refId="Package\Upload competitions\wyznaczenie knocout_stage.Inputs[Input 0]"
+                  refId="Package\Upload competitions\wyznaczenie knockout_stage.Inputs[Input 0]"
                   hasSideEffects="true"
                   name="Input 0">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Upload competitions\wyznaczenie knocout_stage.Inputs[Input 0].Columns[type]"
+                      refId="Package\Upload competitions\wyznaczenie knockout_stage.Inputs[Input 0].Columns[type]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="type"
                       lineageId="Package\Upload competitions\competitions_csv.Outputs[Flat File Source Output].Columns[type]" />
                     <inputColumn
-                      refId="Package\Upload competitions\wyznaczenie knocout_stage.Inputs[Input 0].Columns[sub_type]"
+                      refId="Package\Upload competitions\wyznaczenie knockout_stage.Inputs[Input 0].Columns[sub_type]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="sub_type"
@@ -2681,14 +2681,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Upload competitions\wyznaczenie knocout_stage.Outputs[Output 0]"
+                  refId="Package\Upload competitions\wyznaczenie knockout_stage.Outputs[Output 0]"
                   name="Output 0"
-                  synchronousInputId="Package\Upload competitions\wyznaczenie knocout_stage.Inputs[Input 0]">
+                  synchronousInputId="Package\Upload competitions\wyznaczenie knockout_stage.Inputs[Input 0]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Upload competitions\wyznaczenie knocout_stage.Outputs[Output 0].Columns[knockout_stage]"
+                      refId="Package\Upload competitions\wyznaczenie knockout_stage.Outputs[Output 0].Columns[knockout_stage]"
                       dataType="bool"
-                      lineageId="Package\Upload competitions\wyznaczenie knocout_stage.Outputs[Output 0].Columns[knockout_stage]"
+                      lineageId="Package\Upload competitions\wyznaczenie knockout_stage.Outputs[Output 0].Columns[knockout_stage]"
                       name="knockout_stage" />
                   </outputColumns>
                   <externalMetadataColumns />
@@ -2699,14 +2699,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
           <paths>
             <path
               refId="Package\Upload competitions.Paths[Flat File Source Output]"
-              endId="Package\Upload competitions\wyznaczenie knocout_stage.Inputs[Input 0]"
+              endId="Package\Upload competitions\wyznaczenie knockout_stage.Inputs[Input 0]"
               name="Flat File Source Output"
               startId="Package\Upload competitions\competitions_csv.Outputs[Flat File Source Output]" />
             <path
               refId="Package\Upload competitions.Paths[Output 0]"
               endId="Package\Upload competitions\d_competitions.Inputs[OLE DB Destination Input]"
               name="Output 0"
-              startId="Package\Upload competitions\wyznaczenie knocout_stage.Outputs[Output 0]" />
+              startId="Package\Upload competitions\wyznaczenie knockout_stage.Outputs[Output 0]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -2852,6 +2852,10 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                       refId="Package\Upload game events\d_k_game_events.Inputs[OLE DB Destination Input].ExternalColumns[id_player_in]"
                       dataType="i4"
                       name="id_player_in" />
+                    <externalMetadataColumn
+                      refId="Package\Upload game events\d_k_game_events.Inputs[OLE DB Destination Input].ExternalColumns[id]"
+                      dataType="i4"
+                      name="id" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -4571,7 +4575,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
         <NodeLayout
           Size="198,42"
           Id="Package\upload player valuations"
-          TopLeft="1013,289" />
+          TopLeft="1013,288" />
         <NodeLayout
           Size="152,42"
           Id="Package\Upload players"
@@ -4718,9 +4722,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="24,54"
+              EndConnector="24,53"
               Start="0,0"
-              End="16.5,54">
+              End="16.5,53">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -4731,13 +4735,13 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                     Point2="12,0"
                     Point3="12,4" />
                   <mssgle:LineSegment
-                    End="12,50" />
+                    End="12,49" />
                   <mssgle:CubicBezierSegment
-                    Point1="12,50"
-                    Point2="12,54"
-                    Point3="16,54" />
+                    Point1="12,49"
+                    Point2="12,53"
+                    Point3="16,53" />
                   <mssgle:LineSegment
-                    End="16.5,54" />
+                    End="16.5,53" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4753,18 +4757,18 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
     design-time-name="Package\Upload clubs">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="127,42"
           Id="Package\Upload clubs\clubs_csv"
-          TopLeft="286,57" />
+          TopLeft="83,17" />
         <NodeLayout
           Size="117,42"
           Id="Package\Upload clubs\d_clubs"
-          TopLeft="287,190" />
+          TopLeft="84,150" />
         <EdgeLayout
           Id="Package\Upload clubs.Paths[Flat File Source Output]"
-          TopLeft="347.5,99">
+          TopLeft="144.5,59">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -4781,7 +4785,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -4804,10 +4810,10 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
     design-time-name="Package\Upload competitions">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="216,42"
-          Id="Package\Upload competitions\wyznaczenie knocout_stage"
+          Size="222,42"
+          Id="Package\Upload competitions\wyznaczenie knockout_stage"
           TopLeft="91.5,115.5" />
         <NodeLayout
           Size="163,42"
@@ -4819,7 +4825,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
           TopLeft="125.5,245.5" />
         <EdgeLayout
           Id="Package\Upload competitions.Paths[Output 0]"
-          TopLeft="200.75,157.5">
+          TopLeft="202.25,157.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -4836,12 +4842,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Upload competitions.Paths[Flat File Source Output]"
-          TopLeft="198.75,46.5">
+          TopLeft="200.25,46.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -4858,7 +4866,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -4883,16 +4893,16 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="169,42"
-          Id="Package\Upload game events\d_k_game_events"
-          TopLeft="161,191" />
-        <NodeLayout
           Size="168,42"
           Id="Package\Upload game events\game_events_csv"
-          TopLeft="168,56" />
+          TopLeft="56,7" />
+        <NodeLayout
+          Size="169,42"
+          Id="Package\Upload game events\d_k_game_events"
+          TopLeft="59,142" />
         <EdgeLayout
           Id="Package\Upload game events.Paths[Flat File Source Output]"
-          TopLeft="248.75,98">
+          TopLeft="141.75,49">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -4932,18 +4942,18 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
     design-time-name="Package\Upload games">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="135,42"
           Id="Package\Upload games\games_csv"
-          TopLeft="134.5,41.5" />
+          TopLeft="61.5,12.5" />
         <NodeLayout
           Size="124,42"
           Id="Package\Upload games\d_games"
-          TopLeft="146,162" />
+          TopLeft="73,133" />
         <EdgeLayout
           Id="Package\Upload games.Paths[Flat File Source Output]"
-          TopLeft="205,83.5">
+          TopLeft="132,54.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -4960,7 +4970,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -4987,14 +4999,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
         <NodeLayout
           Size="187,42"
           Id="Package\upload player valuations\player_valuations_csv"
-          TopLeft="81,39" />
+          TopLeft="52,7" />
         <NodeLayout
           Size="189,42"
           Id="Package\upload player valuations\d_k_player_valuations"
-          TopLeft="78,157" />
+          TopLeft="49,125" />
         <EdgeLayout
           Id="Package\upload player valuations.Paths[Flat File Source Output]"
-          TopLeft="173.5,81">
+          TopLeft="144.5,49">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -5036,18 +5048,18 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
     design-time-name="Package\Upload players">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="137,42"
           Id="Package\Upload players\players_csv"
-          TopLeft="95.5,95.5" />
+          TopLeft="65.5,13.5" />
         <NodeLayout
           Size="127,42"
           Id="Package\Upload players\d_players"
-          TopLeft="102,224" />
+          TopLeft="72,142" />
         <EdgeLayout
           Id="Package\Upload players.Paths[Flat File Source Output]"
-          TopLeft="164.75,137.5">
+          TopLeft="134.75,55.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -5064,7 +5076,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>

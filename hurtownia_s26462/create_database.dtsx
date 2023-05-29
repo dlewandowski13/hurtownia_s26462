@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="create_database"
   DTS:PackageType="5"
-  DTS:VersionBuild="81"
-  DTS:VersionGUID="{0EED5B1A-FD2D-4363-9E44-92D197B19083}">
+  DTS:VersionBuild="85"
+  DTS:VersionGUID="{1A94C30D-13F6-491C-8AAA-3500CD71F0A1}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -411,7 +411,7 @@
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{A03DBFE5-ACCC-4917-B36B-192FBE8DF1E7}"
-          SQLTask:SqlStatementSource="USE hurtownia_s26462;&#xA;&#xA;IF NOT EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'd_k_game_events' AND TABLE_SCHEMA = 'dbo')&#xA;BEGIN&#xA;    CREATE TABLE dbo.d_k_game_events (&#xA;        id INT PRIMARY KEY IDENTITY(1,1),&#xA;        id_game INT,&#xA;        id_player INT NULL,&#xA;        minute INT,&#xA;        event_type NVARCHAR(255),&#xA;        id_player_in INT NULL,&#xA;    );&#xA;END&#xA;"
+          SQLTask:SqlStatementSource="USE hurtownia_s26462;&#xA;&#xA;IF NOT EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'd_k_game_events' AND TABLE_SCHEMA = 'dbo')&#xA;BEGIN&#xA;    CREATE TABLE dbo.d_k_game_events (&#xA;        id INT PRIMARY KEY IDENTITY(1,1),&#xA;        id_game INT,&#xA;        id_player INT NULL,&#xA;        minute INT,&#xA;        event_type NVARCHAR(255),&#xA;        id_player_in INT NULL,&#xA;        FOREIGN KEY (id_game) REFERENCES dbo.d_games(id)&#xA;    );&#xA;END&#xA;"
           SQLTask:ServerVersion="9"
           SQLTask:ExtendedLogging="True"
           SQLTask:LocalConnectionForLogging=""
@@ -575,46 +575,46 @@
         <NodeLayout
           Size="255,42"
           Id="Package\Create Database hurtownia_s26462"
-          TopLeft="52.5,85.5" />
+          TopLeft="34.5,21.5" />
         <NodeLayout
           Size="177,42"
           Id="Package\Create Schema dbo"
-          TopLeft="88.5,178" />
+          TopLeft="70.5,114" />
         <NodeLayout
           Size="209,42"
           Id="Package\Create Table appearances"
-          TopLeft="567,530" />
+          TopLeft="549,466" />
         <NodeLayout
           Size="183,42"
           Id="Package\Create Table d_clubs"
-          TopLeft="370,299" />
+          TopLeft="352,235" />
         <NodeLayout
           Size="219,42"
           Id="Package\Create Table d_competitions"
-          TopLeft="74.5,298" />
+          TopLeft="56.5,234" />
         <NodeLayout
           Size="191,42"
           Id="Package\Create Table d_games"
-          TopLeft="629,301" />
+          TopLeft="611,237" />
         <NodeLayout
           Size="235,42"
           Id="Package\Create Table d_k_game_events"
-          TopLeft="87.5,393" />
+          TopLeft="69.5,329" />
         <NodeLayout
           Size="255,42"
           Id="Package\Create Table d_k_player_valuations"
-          TopLeft="484.5,394" />
+          TopLeft="466.5,330" />
         <NodeLayout
           Size="193,42"
           Id="Package\Create Table d_players"
-          TopLeft="914.984848484848,300.787878787879" />
+          TopLeft="896.984848484848,236.787878787879" />
         <NodeLayout
           Size="227,42"
           Id="Package\Create Table f_player_statistic"
-          TopLeft="865.5,395" />
+          TopLeft="847.5,331" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="180.5,220">
+          TopLeft="162.5,156">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -636,7 +636,7 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="820,321.893939393939">
+          TopLeft="802,257.893939393939">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -658,7 +658,7 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 2]"
-          TopLeft="293.5,319.5">
+          TopLeft="275.5,255.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -680,7 +680,7 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 3]"
-          TopLeft="553,321">
+          TopLeft="535,257">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -702,7 +702,7 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 4]"
-          TopLeft="1011.48484848485,342.787878787879">
+          TopLeft="993.48484848485,278.787878787879">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -736,7 +736,7 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 5]"
-          TopLeft="322.5,414.5">
+          TopLeft="304.5,350.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -758,7 +758,7 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 6]"
-          TopLeft="739.5,415.5">
+          TopLeft="721.5,351.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -780,7 +780,7 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 7]"
-          TopLeft="178.5,127.5">
+          TopLeft="160.5,63.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -802,7 +802,7 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 8]"
-          TopLeft="979,437">
+          TopLeft="961,373">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -834,13 +834,6 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <AnnotationLayout
-          Text=""
-          ParentId="Package"
-          FontInfo="{assembly:Null}"
-          Size="29,40"
-          Id="6fb8f513-6093-45e1-b12e-cbf49c15e4aa"
-          TopLeft="469,140" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
