@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="create_database"
   DTS:PackageType="5"
-  DTS:VersionBuild="85"
-  DTS:VersionGUID="{1A94C30D-13F6-491C-8AAA-3500CD71F0A1}">
+  DTS:VersionBuild="91"
+  DTS:VersionGUID="{3066DDF4-4CD1-4965-BDB9-FA55B5432062}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -477,7 +477,7 @@
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{A03DBFE5-ACCC-4917-B36B-192FBE8DF1E7}"
-          SQLTask:SqlStatementSource="USE hurtownia_s26462;&#xA;&#xA;IF NOT EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'f_player_statistic' AND TABLE_SCHEMA = 'dbo')&#xA;BEGIN&#xA;    CREATE TABLE dbo.f_player_statistic (&#xA;        id nvarchar(50) NULL,&#xA;        id_player INT NULL,&#xA;        id_game INT NULL,&#xA;        id_competition nvarchar(10) NULL,&#xA;        id_club INT NULL,&#xA;        id_k_game_event INT NULL,&#xA;        date DATE NULL,&#xA;        player_name NVARCHAR(255) NULL,&#xA;        is_started BIT NULL,&#xA;        player_team NVARCHAR(255) NULL,&#xA;        home_team NVARCHAR(255) NULL,&#xA;        away_team NVARCHAR(255) NULL,&#x9;&#xA;        match_result NVARCHAR(10) NULL,&#xA;        goals INT NULL,&#xA;        assists INT NULL,&#xA;        yellow_cards INT NULL,&#xA;        red_cards INT NULL,&#xA;        minutes_played INT NULL,&#xA;        player_value INT NULL&#xA;    );&#xA;END&#xA;"
+          SQLTask:SqlStatementSource="USE hurtownia_s26462;&#xA;&#xA;IF NOT EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'f_player_statistic' AND TABLE_SCHEMA = 'dbo')&#xA;BEGIN&#xA;    CREATE TABLE dbo.f_player_statistic (&#xA;        id nvarchar(50) NULL,&#xA;        id_player INT NULL,&#xA;        id_game INT NULL,&#xA;        id_competition nvarchar(10) NULL,&#xA;        id_club INT NULL,&#xA;        id_k_game_event INT NULL,&#xA;        date DATE NULL,&#xA;        player_name NVARCHAR(255) NULL,&#xA;        is_started BIT NULL,&#xA;        player_team NVARCHAR(255) NULL,&#xA;        home_team NVARCHAR(255) NULL,&#xA;        away_team NVARCHAR(255) NULL,&#x9;&#xA;        match_result NVARCHAR(10) NULL,&#xA;        goals INT NULL,&#xA;        assists INT NULL,&#xA;        yellow_cards INT NULL,&#xA;        red_cards INT NULL,&#xA;        minutes_played INT NULL,&#xA;        player_value INT NULL,&#xA;        FOREIGN KEY (id_player) REFERENCES dbo.d_players(id),&#xA;        FOREIGN KEY (id_game) REFERENCES dbo.d_games(id),&#xA;        FOREIGN KEY (id_competition) REFERENCES dbo.d_competitions(id),&#xA;        FOREIGN KEY (id_club) REFERENCES dbo.d_clubs(id),&#xA;        FOREIGN KEY (id_k_game_event) REFERENCES dbo.d_k_game_events(id)&#xA;    );&#xA;END&#xA;"
           SQLTask:ServerVersion="9"
           SQLTask:ExtendedLogging="True"
           SQLTask:LocalConnectionForLogging=""
